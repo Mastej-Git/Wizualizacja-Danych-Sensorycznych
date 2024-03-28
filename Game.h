@@ -4,6 +4,7 @@
 #include <QGraphicsView>
 #include <QWidget>
 #include <QGraphicsScene>
+#include <QColor>
 
 #include "Player.h"
 #include "Score.h"

@@ -14,6 +14,7 @@ Game::Game(QWidget *parent) {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(800, 600);
+    setBackgroundBrush(Qt::black);
 
     // create the player
     this->player = new Player();
@@ -21,6 +22,7 @@ Game::Game(QWidget *parent) {
     this->player->setPos(800/2 - this->player->rect().height()/2, 600 - this->player->rect().height());
     this->player->setFlag(QGraphicsItem::ItemIsFocusable);
     this->player->setFocus();
+    this->player->setBrush(Qt::green);
     this->scene->addItem(this->player);
 
     // create the score
@@ -35,4 +37,13 @@ Game::Game(QWidget *parent) {
     QTimer *timer = new QTimer();
     QObject::connect(timer, SIGNAL(timeout()), player, SLOT(spawn()));
     timer->start(2000);
+
+    // update player position
+    QTimer *timer1 = new QTimer();
+    QObject::connect(timer1, SIGNAL(timeout()), player, SLOT(updatePlayerPosition()));
+    timer1->start(20);
+
+    QTimer *timer2 = new QTimer();
+    QObject::connect(timer2, SIGNAL(timeout()), player, SLOT(updatePlayerBullets()));
+    timer2->start(100);
 }

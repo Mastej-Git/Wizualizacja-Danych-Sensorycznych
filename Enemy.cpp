@@ -24,6 +24,19 @@ Enemy::Enemy() {
 
 void Enemy::move() {
     setPos(x(), y() + rand() % 5 + 3);
+
+    QList<QGraphicsItem *> colliding_items = collidingItems();
+    for (auto elem : colliding_items) {
+        if (typeid(*(elem)) == typeid(Player)) {
+
+            game->health->decrease();
+            scene()->removeItem(this);
+            delete this;
+
+            return;
+        }
+    }
+
     if (pos().y() > 600) {
         game->health->decrease();
         scene()->removeItem(this);
