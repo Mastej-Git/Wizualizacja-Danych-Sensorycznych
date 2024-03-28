@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include "Enemy.h"
+#include "Game.h"
+
+extern Game *game;
 
 Enemy::Enemy() {
 
@@ -21,7 +24,8 @@ Enemy::Enemy() {
 
 void Enemy::move() {
     setPos(x(), y() + rand() % 5 + 3);
-    if (pos().y() + rect().height() < 0) {
+    if (pos().y() > 600) {
+        game->health->decrease();
         scene()->removeItem(this);
         delete this;
     }

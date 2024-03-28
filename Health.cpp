@@ -13,8 +13,8 @@ Health::Health(QGraphicsItem *parent): QGraphicsTextItem(parent) {
 }
 
 void Health::decrease() {
-    this->health -= 1;
-    setPlainText(QString("Score: ") + QString::number(this->health));
+    this->health--;
+    setPlainText(QString("Health: ") + QString::number(this->health));
 }
 
 int Health::get_health() {
