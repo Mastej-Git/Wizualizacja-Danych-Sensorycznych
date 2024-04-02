@@ -1,8 +1,10 @@
 #include <QGraphicsScene>
 #include <QKeyEvent>
 #include <QDebug>
+#include <math.h>
 #include "Player.h"
 #include "Bullet.h"
+#include "Flamethrower.h"
 #include "Enemy.h"
 
 Player::Player() {
@@ -11,6 +13,7 @@ Player::Player() {
     this->keyUpPressed = false;
     this->keyDownPressed = false;
     this->keySpacebarPressed = false;
+    this->keyFlamePressed = false;
 }
 
 void Player::keyPressEvent(QKeyEvent *event) {
@@ -24,6 +27,8 @@ void Player::keyPressEvent(QKeyEvent *event) {
         this->keyDownPressed = true;
     } else if (event->key() == Qt::Key_Space) {
         this->keySpacebarPressed = true;
+    } else if (event->key() == Qt::Key_Backspace) {
+        this->keyFlamePressed = true;
     }
 }
 
@@ -39,6 +44,8 @@ void Player::keyReleaseEvent(QKeyEvent *event) {
         this->keyDownPressed = false;
     } else if (event->key() == Qt::Key_Space) {
         this->keySpacebarPressed = false;
+    } else if (event->key() == Qt::Key_Backspace) {
+        this->keyFlamePressed = false;
     }
 }
 
@@ -70,6 +77,20 @@ void Player::updatePlayerBullets() {
         bullet->setPos(x(), y());
         bullet->setBrush(Qt::yellow);
         scene()->addItem(bullet);
+    }
+    if (keyFlamePressed) {
+        Flamethrower **flamethrower = new Flamethrower*[5];
+        flamethrower[0] = new Flamethrower(-5, -3);
+        flamethrower[1] = new Flamethrower(-3, -5);
+        flamethrower[2] = new Flamethrower(0, -5);
+        flamethrower[3] = new Flamethrower(3, -5);
+        flamethrower[4] = new Flamethrower(5, -3);
+
+        for (int i = 0; i < 5; ++i) {
+            flamethrower[i]->setPos(x(), y());
+            flamethrower[i]->setBrush(Qt::cyan);
+            scene()->addItem((flamethrower[i]));
+        }
     }
 }
 

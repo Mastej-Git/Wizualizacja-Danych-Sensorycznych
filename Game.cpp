@@ -43,6 +43,7 @@ Game::Game(QWidget *parent) {
     QObject::connect(timer1, SIGNAL(timeout()), player, SLOT(updatePlayerPosition()));
     timer1->start(20);
 
+    // update player bullets
     QTimer *timer2 = new QTimer();
     QObject::connect(timer2, SIGNAL(timeout()), player, SLOT(updatePlayerBullets()));
     timer2->start(100);

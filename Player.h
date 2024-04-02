@@ -13,6 +13,7 @@ public:
     bool keyUpPressed;
     bool keyDownPressed;
     bool keySpacebarPressed;
+    bool keyFlamePressed;
 
     Player();
 

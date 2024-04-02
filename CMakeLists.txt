@@ -30,6 +30,8 @@ set(PROJECT_SOURCES
         Score.h
         Health.cpp
         Health.h
+        Flamethrower.cpp
+        Flamethrower.h
         mainwindow.ui
 )
 

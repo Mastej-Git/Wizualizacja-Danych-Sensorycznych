@@ -3,7 +3,7 @@
 #include "Health.h"
 
 Health::Health(QGraphicsItem *parent): QGraphicsTextItem(parent) {
-    this->health = 3;
+    this->health = 5;
 
     // draw the text
     setPlainText(QString("Health: ") + QString::number(this->health));
