@@ -32,6 +32,10 @@ set(PROJECT_SOURCES
         Health.h
         Flamethrower.cpp
         Flamethrower.h
+        Laser.cpp
+        Laser.h
+        Enemycyborg.cpp
+        Enemycyborg.h
         mainwindow.ui
 )
 

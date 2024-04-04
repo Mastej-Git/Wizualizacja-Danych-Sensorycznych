@@ -2,10 +2,14 @@
 #include <QKeyEvent>
 #include <QDebug>
 #include <math.h>
+#include <stdlib.h>
+#include <time.h>
 #include "Player.h"
 #include "Bullet.h"
 #include "Flamethrower.h"
+#include "Laser.h"
 #include "Enemy.h"
+#include "Enemycyborg.h""
 
 Player::Player() {
     this->keyLeftPressed = false;
@@ -14,6 +18,7 @@ Player::Player() {
     this->keyDownPressed = false;
     this->keySpacebarPressed = false;
     this->keyFlamePressed = false;
+    this->keyLaserPressed = false;
 }
 
 void Player::keyPressEvent(QKeyEvent *event) {
@@ -29,6 +34,8 @@ void Player::keyPressEvent(QKeyEvent *event) {
         this->keySpacebarPressed = true;
     } else if (event->key() == Qt::Key_Backspace) {
         this->keyFlamePressed = true;
+    } else if (event->key() == Qt::Key_K) {
+        this->keyLaserPressed = true;
     }
 }
 
@@ -46,6 +53,8 @@ void Player::keyReleaseEvent(QKeyEvent *event) {
         this->keySpacebarPressed = false;
     } else if (event->key() == Qt::Key_Backspace) {
         this->keyFlamePressed = false;
+    } else if (event->key() == Qt::Key_K) {
+        this->keyLaserPressed = false;
     }
 }
 
@@ -78,6 +87,7 @@ void Player::updatePlayerBullets() {
         bullet->setBrush(Qt::yellow);
         scene()->addItem(bullet);
     }
+
     if (keyFlamePressed) {
         Flamethrower **flamethrower = new Flamethrower*[5];
         flamethrower[0] = new Flamethrower(-5, -3);
@@ -91,6 +101,13 @@ void Player::updatePlayerBullets() {
             flamethrower[i]->setBrush(Qt::cyan);
             scene()->addItem((flamethrower[i]));
         }
+    }
+
+    if (keyLaserPressed) {
+        Laser *laser = new Laser();
+        laser->setPos(x(), y());
+        laser->setBrush(Qt::magenta);
+        scene()->addItem(laser);
     }
 }
 
@@ -116,7 +133,18 @@ void Player::updatePlayerBullets() {
 //}
 
 void Player::spawn() {
-    Enemy *enemy = new Enemy();
-    enemy->setBrush(Qt::blue);
-    scene()->addItem(enemy);
+
+    int rand_numb = rand() % 2 + 1;
+
+    if (rand_numb == 1) {
+        Enemy *enemy = new Enemy();
+        enemy->setBrush(Qt::blue);
+        scene()->addItem(enemy);
+    }
+    else {
+        EnemyCyborg *cyborg_enemy = new EnemyCyborg();
+        cyborg_enemy->setBrush(Qt::lightGray);
+        scene()->addItem(cyborg_enemy);
+    }
+
 }

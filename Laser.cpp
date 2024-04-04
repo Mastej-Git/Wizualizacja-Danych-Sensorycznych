@@ -1,14 +1,15 @@
 #include <QTimer>
 #include <QGraphicsScene>
 #include <QList>
-#include "Bullet.h"
-#include "Enemycyborg.h"
+#include "Laser.h"
+#include "Enemy.h"
 #include "Game.h"
 
 extern Game *game;
 
-Bullet::Bullet() {
-    setRect(50 - rect().width()/2, 0, 10, 50);
+Laser::Laser() {
+
+    setRect(10 - rect().width()/2, -500, 80, 500);
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(move()));
@@ -16,35 +17,26 @@ Bullet::Bullet() {
     timer->start(50);
 }
 
-void Bullet::move() {
+void Laser::move() {
 
     QList<QGraphicsItem *> colliding_items = collidingItems();
     for (auto elem : colliding_items) {
-
-        if (typeid(*(elem)) == typeid(EnemyCyborg)) {
+        if (typeid(*(elem)) == typeid(Enemy)) {
 
             game->score->increase();
 
             scene()->removeItem(elem);
-            scene()->removeItem(this);
 
             delete elem;
-            delete this;
-
-            return;
-        }
-
-        else if (typeid(*(elem)) != typeid(EnemyCyborg) && typeid(*(elem)) != typeid(Player)) {
-            scene()->removeItem(this);
-            delete this;
 
             return;
         }
     }
 
-    setPos(x(), y() - 10);
-    if (pos().y() + rect().height() < 0) {
+    setRect(50 - rect().width()/2, -500, rect().width() - 5, rect().height());
+    if (rect().width() < 10) {
         scene()->removeItem(this);
         delete this;
     }
+
 }

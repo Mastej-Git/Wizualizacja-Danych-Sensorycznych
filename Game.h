@@ -5,6 +5,7 @@
 #include <QWidget>
 #include <QGraphicsScene>
 #include <QColor>
+//#include <QGamepad>
 
 #include "Player.h"
 #include "Score.h"

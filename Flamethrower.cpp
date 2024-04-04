@@ -23,6 +23,7 @@ void Flamethrower::move() {
 
     QList<QGraphicsItem *> colliding_items = collidingItems();
     for (auto elem : colliding_items) {
+
         if (typeid(*(elem)) == typeid(Enemy)) {
 
             game->score->increase();
@@ -31,6 +32,13 @@ void Flamethrower::move() {
             scene()->removeItem(this);
 
             delete elem;
+            delete this;
+
+            return;
+        }
+
+        else if (typeid(*(elem)) != typeid(Enemy) && typeid(*(elem)) != typeid(Player) && typeid(*(elem)) != typeid(Flamethrower)) {
+            scene()->removeItem(this);
             delete this;
 
             return;

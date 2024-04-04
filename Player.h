@@ -14,6 +14,7 @@ public:
     bool keyDownPressed;
     bool keySpacebarPressed;
     bool keyFlamePressed;
+    bool keyLaserPressed;
 
     Player();
 
