@@ -19,6 +19,9 @@ public:
     Health *health;
 
     Game(QWidget *parent = 0);
+
+    void drawPanel(int x, int y, int width, int height, QColor color, double opacity);
+    void drawGUI();
 };
 
 #endif // GAME_H

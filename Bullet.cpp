@@ -4,6 +4,8 @@
 #include "Bullet.h"
 #include "Enemycyborg.h"
 #include "Game.h"
+#include "Score.h"
+#include "Health.h"
 
 extern Game *game;
 
@@ -34,7 +36,7 @@ void Bullet::move() {
             return;
         }
 
-        else if (typeid(*(elem)) != typeid(EnemyCyborg) && typeid(*(elem)) != typeid(Player)) {
+        else if (typeid(*(elem)) != typeid(EnemyCyborg) && typeid(*(elem)) != typeid(Player) && typeid(*(elem)) != typeid(Bullet)) {
             scene()->removeItem(this);
             delete this;
 

@@ -36,7 +36,6 @@ void Flamethrower::move() {
 
             return;
         }
-
         else if (typeid(*(elem)) != typeid(Enemy) && typeid(*(elem)) != typeid(Player) && typeid(*(elem)) != typeid(Flamethrower)) {
             scene()->removeItem(this);
             delete this;

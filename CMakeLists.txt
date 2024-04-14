@@ -36,6 +36,10 @@ set(PROJECT_SOURCES
         Laser.h
         Enemycyborg.cpp
         Enemycyborg.h
+        EnemySentients.cpp
+        EnemySentients.h
+        LangButton.cpp
+        LangButton.h
         mainwindow.ui
 )
 

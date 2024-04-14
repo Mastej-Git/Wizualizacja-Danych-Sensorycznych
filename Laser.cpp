@@ -2,7 +2,7 @@
 #include <QGraphicsScene>
 #include <QList>
 #include "Laser.h"
-#include "Enemy.h"
+#include "EnemySentients.h"
 #include "Game.h"
 
 extern Game *game;
@@ -21,7 +21,7 @@ void Laser::move() {
 
     QList<QGraphicsItem *> colliding_items = collidingItems();
     for (auto elem : colliding_items) {
-        if (typeid(*(elem)) == typeid(Enemy)) {
+        if (typeid(*(elem)) == typeid(EnemySentients)) {
 
             game->score->increase();
 

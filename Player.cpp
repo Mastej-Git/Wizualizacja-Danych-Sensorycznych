@@ -9,7 +9,8 @@
 #include "Flamethrower.h"
 #include "Laser.h"
 #include "Enemy.h"
-#include "Enemycyborg.h""
+#include "Enemycyborg.h"
+#include "EnemySentients.h"
 
 Player::Player() {
     this->keyLeftPressed = false;
@@ -30,11 +31,11 @@ void Player::keyPressEvent(QKeyEvent *event) {
         this->keyUpPressed = true;
     } else if (event->key() == Qt::Key_Down) {
         this->keyDownPressed = true;
-    } else if (event->key() == Qt::Key_Space) {
+    } else if (event->key() == Qt::Key_Z) {
         this->keySpacebarPressed = true;
-    } else if (event->key() == Qt::Key_Backspace) {
+    } else if (event->key() == Qt::Key_X) {
         this->keyFlamePressed = true;
-    } else if (event->key() == Qt::Key_K) {
+    } else if (event->key() == Qt::Key_C) {
         this->keyLaserPressed = true;
     }
 }
@@ -49,11 +50,11 @@ void Player::keyReleaseEvent(QKeyEvent *event) {
         this->keyUpPressed = false;
     } else if (event->key() == Qt::Key_Down) {
         this->keyDownPressed = false;
-    } else if (event->key() == Qt::Key_Space) {
+    } else if (event->key() == Qt::Key_Z) {
         this->keySpacebarPressed = false;
-    } else if (event->key() == Qt::Key_Backspace) {
+    } else if (event->key() == Qt::Key_X) {
         this->keyFlamePressed = false;
-    } else if (event->key() == Qt::Key_K) {
+    } else if (event->key() == Qt::Key_C) {
         this->keyLaserPressed = false;
     }
 }
@@ -134,17 +135,22 @@ void Player::updatePlayerBullets() {
 
 void Player::spawn() {
 
-    int rand_numb = rand() % 2 + 1;
+    int rand_numb = rand() % 3 + 1;
 
     if (rand_numb == 1) {
         Enemy *enemy = new Enemy();
         enemy->setBrush(Qt::blue);
         scene()->addItem(enemy);
     }
-    else {
+    else if (rand_numb == 2) {
         EnemyCyborg *cyborg_enemy = new EnemyCyborg();
         cyborg_enemy->setBrush(Qt::lightGray);
         scene()->addItem(cyborg_enemy);
+    }
+    else if (rand_numb == 3) {
+        EnemySentients *sentient_enemy = new EnemySentients();
+        sentient_enemy->setBrush(Qt::darkRed);
+        scene()->addItem(sentient_enemy);
     }
 
 }

@@ -2,19 +2,19 @@
 #include <QGraphicsScene>
 #include <stdlib.h>
 #include <time.h>
-#include "Enemycyborg.h"
+#include "EnemySentients.h"
 #include "Game.h"
 
 extern Game *game;
 
-EnemyCyborg::EnemyCyborg() {
+EnemySentients::EnemySentients() {
 
     srand(time(NULL));
 
     int rand_numb = rand() % 700;
     setPos(rand_numb, 0);
 
-    setRect(0, 0, 65, 140);
+    setRect(0, 0, 120, 80);
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(move()));
@@ -22,7 +22,7 @@ EnemyCyborg::EnemyCyborg() {
     timer->start(50);
 }
 
-void EnemyCyborg::move() {
+void EnemySentients::move() {
     setPos(x(), y() + rand() % 5 + 3);
 
     QList<QGraphicsItem *> colliding_items = collidingItems();
