@@ -3,10 +3,11 @@
 #include <QGraphicsProxyWidget>
 #include <QtCharts/QChartView>
 #include <QtCharts/QLineSeries>
+#include <QMainWindow>
+#include <QDebug>
 
 #include "Game.h"
 #include "Enemy.h"
-#include "LangButton.h"
 
 Game::Game(QWidget *parent) {
 
@@ -38,30 +39,22 @@ Game::Game(QWidget *parent) {
     this->health = new Health();
     this->scene->addItem(this->health);
 
-    // create the enemys
+    // create the enemies
     QTimer *timer = new QTimer();
-    QObject::connect(timer, SIGNAL(timeout()), player, SLOT(spawn()));
+    QObject::connect(timer, SIGNAL(timeout()), this->player, SLOT(spawn()));
     timer->start(2000);
 
     // update player position
     QTimer *timer1 = new QTimer();
-    QObject::connect(timer1, SIGNAL(timeout()), player, SLOT(updatePlayerPosition()));
+    QObject::connect(timer1, SIGNAL(timeout()), this->player, SLOT(updatePlayerPosition()));
     timer1->start(20);
 
     // update player bullets
     QTimer *timer2 = new QTimer();
-    QObject::connect(timer2, SIGNAL(timeout()), player, SLOT(updatePlayerBullets()));
+    QObject::connect(timer2, SIGNAL(timeout()), this->player, SLOT(updatePlayerBullets()));
     timer2->start(100);
 
     this->drawGUI();
-
-    // create button
-//    LangButton *langButton = new LangButton(QString("Language"));
-//    int bxPos = this->width()/2 - langButton->boundingRect().width()/2;
-//    int byPos = 275;
-//    langButton->setPos(bxPos, byPos);
-//    connect(langButton, SIGNAL(clicked()), this, SLOT(changeLanguage()));
-    //    scene->addItem(langButton);
 }
 
 void Game::drawPanel(int x, int y, int width, int height, QColor color, double opacity) {
@@ -97,50 +90,44 @@ void Game::drawGUI() {
 
     scene->addItem(controller_text);
 
-    // difficulty combo box
-    QComboBox *difficulty = new QComboBox();
-    difficulty->addItem("Easy");
-    difficulty->addItem("Medium");
-    difficulty->addItem("Hard");
+    // difficulty combobox and txt
+    QStringList list = {"Easy", "Medium", "Hard"};
+    this->difficulty = new ComboBoxTxt(list, "Difficulty level", 807, 277, this->health, this->player);
 
-    difficulty->setFont(controller_font);
-    difficulty->setStyleSheet("QComboBox { border: 2px solid grey; }");
-    difficulty->setFixedWidth(130);
-
-    QGraphicsProxyWidget *proxy1 = scene->addWidget(difficulty);
+    QGraphicsProxyWidget *proxy1 = scene->addWidget(this->difficulty->combo_box);
     proxy1->setPos(810, 300);
+    scene->addItem(this->difficulty->text);
 
-    // difficulty combo box text
+    QObject::connect(this->difficulty->combo_box, SIGNAL(currentIndexChanged(int)), this->difficulty, SLOT(change_item(int)));
 
-    QGraphicsTextItem *difficulty_text = new QGraphicsTextItem("Difficulty level");
-    difficulty_text->setPos(807, 277);
-    difficulty_text->setDefaultTextColor(Qt::white);
+    // language combobox and txt
+    QStringList list1 = {"Polski", "English"};
+    this->language = new ComboBoxTxt(list1, "Language", 807, 547, nullptr, this->player);
 
-    QFont difficulty_font("Times[Adobe]", 9);
-    difficulty_text->setFont(difficulty_font);
-
-    scene->addItem(difficulty_text);
-
-    // language combo box
-    QComboBox *language = new QComboBox();
-    language->addItem("Polski");
-    language->addItem("English");
-
-    language->setFont(controller_font);
-    language->setStyleSheet("QComboBox { border: 2px solid grey; }");
-    language->setFixedWidth(130);
-
-    QGraphicsProxyWidget *proxy2 = scene->addWidget(language);
+    QGraphicsProxyWidget *proxy2 = scene->addWidget(this->language->combo_box);
     proxy2->setPos(810, 570);
+    scene->addItem(this->language->text);
 
-    // language combo box text
+    // chart
+    QtCharts::QLineSeries *series = new QtCharts::QLineSeries();
+    series->append(0, 6);
+    series->append(2, 4);
+    series->append(3, 8);
+    series->append(7, 4);
+    series->append(10, 5);
 
-    QGraphicsTextItem *language_text = new QGraphicsTextItem("Language");
-    language_text->setPos(807, 547);
-    language_text->setDefaultTextColor(Qt::white);
+    *series << QPointF(11, 1) << QPointF(13, 3) << QPointF(17, 6) << QPointF(18, 3) << QPointF(20, 2);
 
-    QFont language_font("Times[Adobe]", 9);
-    language_text->setFont(language_font);
+    QtCharts::QChart *chart = new QtCharts::QChart();
+    chart->legend()->hide();
+    chart->addSeries(series);
+    chart->setTitle("Axis position");
 
-    scene->addItem(language_text);
+    QtCharts::QChartView *chartView = new QtCharts::QChartView(chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
+}
+
+void Game::comboBoxChange(int index, QComboBox &language) {
+    QString selected_item = language.itemText(index);
+    qDebug() << "Selected item: " << selected_item;
 }

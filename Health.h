@@ -11,6 +11,7 @@ public:
     Health(QGraphicsItem *parent = 0);
     void decrease();
     int get_health();
+    void set_heath(int health);
 };
 
 #endif // HEALTH_H

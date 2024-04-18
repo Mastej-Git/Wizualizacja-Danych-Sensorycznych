@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
+find_package(Qt5 REQUIRED COMPONENTS Charts)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
@@ -40,6 +41,8 @@ set(PROJECT_SOURCES
         EnemySentients.h
         LangButton.cpp
         LangButton.h
+        ComboBoxTxt.cpp
+        ComboBoxTxt.h
         mainwindow.ui
 )
 
@@ -67,6 +70,7 @@ else()
 endif()
 
 target_link_libraries(SpaceInvaders PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(SpaceInvaders PRIVATE Qt${QT_VERSION_MAJOR}::Charts)
 
 set_target_properties(SpaceInvaders PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

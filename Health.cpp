@@ -20,3 +20,8 @@ void Health::decrease() {
 int Health::get_health() {
     return this->health;
 }
+
+void Health::set_heath(int health) {
+    this->health = health;
+    setPlainText(QString("Health: ") + QString::number(this->health));
+}
