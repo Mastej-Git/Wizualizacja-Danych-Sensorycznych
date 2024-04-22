@@ -1,0 +1,11 @@
+<map id="Game" name="Game">
+<area shape="rect" id="node1" title=" " alt="" coords="256,287,313,313"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,183,119,209"/>
+<area shape="rect" id="node3" href="$classHealth.html" title=" " alt="" coords="356,81,416,108"/>
+<area shape="rect" id="node5" href="$classComboBoxTxt.html" title=" " alt="" coords="231,183,338,209"/>
+<area shape="rect" id="node4" title=" " alt="" coords="367,5,501,32"/>
+<area shape="rect" id="node9" href="$classScore.html" title=" " alt="" coords="441,132,497,159"/>
+<area shape="rect" id="node6" title=" " alt="" coords="247,5,317,32"/>
+<area shape="rect" id="node7" href="$classPlayer.html" title=" " alt="" coords="162,81,221,108"/>
+<area shape="rect" id="node8" title=" " alt="" coords="83,5,222,32"/>
+</map>

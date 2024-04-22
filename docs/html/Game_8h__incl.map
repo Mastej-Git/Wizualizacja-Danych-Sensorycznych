@@ -1,0 +1,16 @@
+<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/Game.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/Game.h">
+<area shape="rect" id="node1" title="This is a Game header file. Contains deffinition of an Game class." alt="" coords="393,5,579,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,109,119,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="143,109,216,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="240,109,361,136"/>
+<area shape="rect" id="node5" title=" " alt="" coords="385,109,448,136"/>
+<area shape="rect" id="node6" title=" " alt="" coords="433,184,531,211"/>
+<area shape="rect" id="node7" href="$Player_8h.html" title="This is a Player header file. Contains deffinition of a Player class." alt="" coords="555,184,625,211"/>
+<area shape="rect" id="node11" href="$Score_8h.html" title="This is an Score header file. Contains deffinition of an Health class." alt="" coords="774,109,841,136"/>
+<area shape="rect" id="node13" href="$Health_8h.html" title="This is an Health header file. Contains deffinition of an Health class." alt="" coords="649,184,720,211"/>
+<area shape="rect" id="node14" href="$ComboBoxTxt_8h.html" title="This is a ComboBoxTxt with text header file. Contains deffinition of a ComboBoxTxt class." alt="" coords="574,109,691,136"/>
+<area shape="rect" id="node8" title=" " alt="" coords="650,259,789,285"/>
+<area shape="rect" id="node9" title=" " alt="" coords="555,259,625,285"/>
+<area shape="rect" id="node10" title=" " alt="" coords="367,259,530,285"/>
+<area shape="rect" id="node12" title=" " alt="" coords="744,184,879,211"/>
+</map>

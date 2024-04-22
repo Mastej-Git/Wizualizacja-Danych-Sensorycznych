@@ -1,0 +1,6 @@
+<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/EnemyCyborg.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/EnemyCyborg.h">
+<area shape="rect" id="node1" title="This is an EnemyCyborg header file. Contains deffinition of an EnemyCyborg class." alt="" coords="222,5,433,61"/>
+<area shape="rect" id="node2" href="$Bullet_8cpp.html" title="This is a Bullet source file. Contains code for all the functions from header file." alt="" coords="5,109,191,165"/>
+<area shape="rect" id="node3" href="$EnemyCyborg_8cpp.html" title="This is a EnemyCyborg source file. Contains code for all the functions from header file." alt="" coords="215,109,440,165"/>
+<area shape="rect" id="node4" href="$Player_8cpp.html" title="This is a Player source file. Contains code for all the functions from header file." alt="" coords="464,109,649,165"/>
+</map>

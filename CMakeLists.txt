@@ -17,33 +17,29 @@ find_package(Qt5 REQUIRED COMPONENTS Gamepad)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
-        main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        Player.cpp
-        Player.h
-        Bullet.cpp
-        Bullet.h
-        Enemy.cpp
-        Enemy.h
-        Game.cpp
-        Game.h
-        Score.cpp
-        Score.h
-        Health.cpp
-        Health.h
-        Flamethrower.cpp
-        Flamethrower.h
-        Laser.cpp
-        Laser.h
-        Enemycyborg.cpp
-        Enemycyborg.h
-        EnemySentients.cpp
-        EnemySentients.h
-        LangButton.cpp
-        LangButton.h
-        ComboBoxTxt.cpp
-        ComboBoxTxt.h
+        src/main.cpp
+        src/Player.cpp
+        inc/Player.h
+        src/Bullet.cpp
+        inc/Bullet.h
+        src/Enemy.cpp
+        inc/Enemy.h
+        src/Game.cpp
+        inc/Game.h
+        src/Score.cpp
+        inc/Score.h
+        src/Health.cpp
+        inc/Health.h
+        src/Flamethrower.cpp
+        inc/Flamethrower.h
+        src/Laser.cpp
+        inc/Laser.h
+        src/EnemyCyborg.cpp
+        inc/EnemyCyborg.h
+        src/EnemySentients.cpp
+        inc/EnemySentients.h
+        src/ComboBoxTxt.cpp
+        inc/ComboBoxTxt.h
         mainwindow.ui
 )
 
