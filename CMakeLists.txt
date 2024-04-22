@@ -13,6 +13,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt5 REQUIRED COMPONENTS Charts)
+find_package(Qt5 REQUIRED COMPONENTS Gamepad)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
@@ -71,6 +72,7 @@ endif()
 
 target_link_libraries(SpaceInvaders PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(SpaceInvaders PRIVATE Qt${QT_VERSION_MAJOR}::Charts)
+target_link_libraries(SpaceInvaders PRIVATE Qt${QT_VERSION_MAJOR}::Gamepad)
 
 set_target_properties(SpaceInvaders PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com

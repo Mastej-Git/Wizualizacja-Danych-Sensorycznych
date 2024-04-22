@@ -37,3 +37,14 @@ void ComboBoxTxt::change_item(int index) {
     }
     this->player->setFocus();
 }
+
+void ComboBoxTxt::change_language(int index) {
+    if (index == 0) {
+        qDebug() << "Zmieniono język na Polski";
+    }
+    else {
+        qDebug() << "Changed language to english";
+    }
+
+    this->player->setFocus();
+}

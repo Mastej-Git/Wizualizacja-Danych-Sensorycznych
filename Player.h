@@ -3,6 +3,7 @@
 
 #include <QGraphicsRectItem>
 #include <QObject>
+#include <QtGamepad/QGamepad>
 
 class Player : public QObject, public QGraphicsRectItem  {
     Q_OBJECT

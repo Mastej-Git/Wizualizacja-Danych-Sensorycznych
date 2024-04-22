@@ -102,11 +102,13 @@ void Game::drawGUI() {
 
     // language combobox and txt
     QStringList list1 = {"Polski", "English"};
-    this->language = new ComboBoxTxt(list1, "Language", 807, 547, nullptr, this->player);
+    this->language = new ComboBoxTxt(list1, "Language", 807, 517, nullptr, this->player);
 
     QGraphicsProxyWidget *proxy2 = scene->addWidget(this->language->combo_box);
-    proxy2->setPos(810, 570);
+    proxy2->setPos(810, 540);
     scene->addItem(this->language->text);
+
+    QObject::connect(this->language->combo_box, SIGNAL(currentIndexChanged(int)), this->language, SLOT(change_language(int)));
 
     // chart
     QtCharts::QLineSeries *series = new QtCharts::QLineSeries();

@@ -20,6 +20,7 @@ public:
 
 public slots:
     void change_item(int index);
+    void change_language(int index);
 };
 
 #endif // COMBOBOXTXT_H
