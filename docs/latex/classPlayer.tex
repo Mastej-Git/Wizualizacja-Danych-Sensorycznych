@@ -22,23 +22,24 @@ Collaboration diagram for Player\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classPlayer_a59ae3f2c7151032a85e58b1591cad769}\label{classPlayer_a59ae3f2c7151032a85e58b1591cad769}} 
-void {\bfseries spawn} ()
-\item 
+void \mbox{\hyperlink{classPlayer_a59ae3f2c7151032a85e58b1591cad769}{spawn}} ()
+\begin{DoxyCompactList}\small\item\em Slot position to spawn all the enemy types. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPlayer_ad48f687798a2245155d637b9fac6cda2}\label{classPlayer_ad48f687798a2245155d637b9fac6cda2}} 
-void {\bfseries update\+Player\+Position} ()
-\item 
+void \mbox{\hyperlink{classPlayer_ad48f687798a2245155d637b9fac6cda2}{update\+Player\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Slot function to move the \mbox{\hyperlink{classPlayer}{Player}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classPlayer_aabfc5a8cfd7fb8bbbc7a901d163da9d8}\label{classPlayer_aabfc5a8cfd7fb8bbbc7a901d163da9d8}} 
-void {\bfseries update\+Player\+Bullets} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classPlayer_aabfc5a8cfd7fb8bbbc7a901d163da9d8}{update\+Player\+Bullets}} ()
+\begin{DoxyCompactList}\small\item\em Slot function to move the bullets. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classPlayer_a4d269c4118c29b0ee85c1e0f674260ee}\label{classPlayer_a4d269c4118c29b0ee85c1e0f674260ee}} 
-void {\bfseries key\+Press\+Event} (QKey\+Event $\ast$event)
-\item 
-\mbox{\Hypertarget{classPlayer_a09f3d5dea93b5699138eba6f4f420b27}\label{classPlayer_a09f3d5dea93b5699138eba6f4f420b27}} 
-void {\bfseries key\+Release\+Event} (QKey\+Event $\ast$event)
-\end{DoxyCompactItemize}
+\mbox{\Hypertarget{classPlayer_affe0cc3cb714f6deb4e62f0c0d3f1fd8}\label{classPlayer_affe0cc3cb714f6deb4e62f0c0d3f1fd8}} 
+\mbox{\hyperlink{classPlayer_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classPlayer}{Player}}\+:\+: \mbox{\hyperlink{classPlayer}{Player}} object. Sets all the key flags to false. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a4d269c4118c29b0ee85c1e0f674260ee}{key\+Press\+Event}} (QKey\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Listens and sets the key flags to true on press. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a09f3d5dea93b5699138eba6f4f420b27}{key\+Release\+Event}} (QKey\+Event $\ast$event)
+\begin{DoxyCompactList}\small\item\em Listens and sets the key flags to false on release. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -65,7 +66,40 @@ bool {\bfseries key\+Laser\+Pressed}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPlayer_a4d269c4118c29b0ee85c1e0f674260ee}\label{classPlayer_a4d269c4118c29b0ee85c1e0f674260ee}} 
+\index{Player@{Player}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void Player\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Listens and sets the key flags to true on press. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPlayer_a09f3d5dea93b5699138eba6f4f420b27}\label{classPlayer_a09f3d5dea93b5699138eba6f4f420b27}} 
+\index{Player@{Player}!keyReleaseEvent@{keyReleaseEvent}}
+\index{keyReleaseEvent@{keyReleaseEvent}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{keyReleaseEvent()}{keyReleaseEvent()}}
+{\footnotesize\ttfamily void Player\+::key\+Release\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Listens and sets the key flags to false on release. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/feniks/my\+\_\+ws/6sem/\+WDS/\+Space\+Invaders/\+Space\+Invaders/\mbox{\hyperlink{Player_8h}{Player.\+h}}\item 
-/home/feniks/my\+\_\+ws/6sem/\+WDS/\+Space\+Invaders/\+Space\+Invaders/\mbox{\hyperlink{Player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}
+/home/feniks/my\+\_\+ws/6sem/\+WDS/\+Space\+Invaders/\+Space\+Invaders/inc/\mbox{\hyperlink{Player_8h}{Player.\+h}}\item 
+/home/feniks/my\+\_\+ws/6sem/\+WDS/\+Space\+Invaders/\+Space\+Invaders/src/\mbox{\hyperlink{Player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

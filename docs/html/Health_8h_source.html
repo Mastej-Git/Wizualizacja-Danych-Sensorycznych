@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Space Invaders: /home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/Health.h Source File</title>
+<title>Space Invaders: /home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/Health.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -61,9 +60,14 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/Health.h</div>  </div>
+<div class="title">Health.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <a href="Health_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
@@ -77,14 +81,18 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> health;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classHealth.html">Health</a>(QGraphicsItem *parent = 0);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> decrease();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> get_health();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> set_heath(<span class="keywordtype">int</span> health);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classHealth.html#af8daf3e4533a91b1987d2297dd765208">Health</a>(QGraphicsItem *parent = 0);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classHealth.html#a15836492efb60f8c61151d35379768d2">decrease</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classHealth.html#a8787851850f0046abd6ae90a50e72177">get_health</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classHealth.html#af306158f5cb22aa2ef417ae71ed1b1c2">set_heath</a>(<span class="keywordtype">int</span> health);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// HEALTH_H</span></div>
 <div class="ttc" id="aclassHealth_html"><div class="ttname"><a href="classHealth.html">Health</a></div><div class="ttdef"><b>Definition:</b> Health.h:18</div></div>
+<div class="ttc" id="aclassHealth_html_a15836492efb60f8c61151d35379768d2"><div class="ttname"><a href="classHealth.html#a15836492efb60f8c61151d35379768d2">Health::decrease</a></div><div class="ttdeci">void decrease()</div><div class="ttdoc">Decreases health when any enemy type touches the Player.</div><div class="ttdef"><b>Definition:</b> Health.cpp:35</div></div>
+<div class="ttc" id="aclassHealth_html_a8787851850f0046abd6ae90a50e72177"><div class="ttname"><a href="classHealth.html#a8787851850f0046abd6ae90a50e72177">Health::get_health</a></div><div class="ttdeci">int get_health()</div><div class="ttdoc">Returns health number.</div><div class="ttdef"><b>Definition:</b> Health.cpp:45</div></div>
+<div class="ttc" id="aclassHealth_html_af306158f5cb22aa2ef417ae71ed1b1c2"><div class="ttname"><a href="classHealth.html#af306158f5cb22aa2ef417ae71ed1b1c2">Health::set_heath</a></div><div class="ttdeci">void set_heath(int health)</div><div class="ttdoc">Sets health points.</div><div class="ttdef"><b>Definition:</b> Health.cpp:54</div></div>
+<div class="ttc" id="aclassHealth_html_af8daf3e4533a91b1987d2297dd765208"><div class="ttname"><a href="classHealth.html#af8daf3e4533a91b1987d2297dd765208">Health::Health</a></div><div class="ttdeci">Health(QGraphicsItem *parent=0)</div><div class="ttdoc">Construct a new Health:: Health object.</div><div class="ttdef"><b>Definition:</b> Health.cpp:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

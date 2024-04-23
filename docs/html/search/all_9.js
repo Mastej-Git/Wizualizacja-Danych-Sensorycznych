@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['qt_5fmeta_5fstringdata_5fbullet_5ft_31',['qt_meta_stringdata_Bullet_t',['../structqt__meta__stringdata__Bullet__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fenemy_5ft_32',['qt_meta_stringdata_Enemy_t',['../structqt__meta__stringdata__Enemy__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fmainwindow_5ft_33',['qt_meta_stringdata_MainWindow_t',['../structqt__meta__stringdata__MainWindow__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fmyrect_5ft_34',['qt_meta_stringdata_MyRect_t',['../structqt__meta__stringdata__MyRect__t.html',1,'']]]
+  ['laser_34',['Laser',['../classLaser.html',1,'Laser'],['../classLaser.html#a68465e89283dffcc29a37e94693c6f87',1,'Laser::Laser()']]],
+  ['laser_2ecpp_35',['Laser.cpp',['../Laser_8cpp.html',1,'']]],
+  ['laser_2eh_36',['Laser.h',['../Laser_8h.html',1,'']]]
 ];

@@ -1,5 +1,5 @@
-<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/Health.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/Health.h">
-<area shape="rect" id="node1" title="This is an Health header file. Contains deffinition of an Health class." alt="" coords="46,5,231,61"/>
+<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/Health.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/Health.h">
+<area shape="rect" id="node1" title="Health header file. Adds info how many health point does player have. Is located in top left corner h..." alt="" coords="45,5,232,61"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,109,144,136"/>
 <area shape="rect" id="node3" title=" " alt="" coords="169,109,239,136"/>
 </map>

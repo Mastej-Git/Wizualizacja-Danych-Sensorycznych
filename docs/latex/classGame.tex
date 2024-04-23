@@ -21,15 +21,13 @@ Collaboration diagram for Game\+:\nopagebreak
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classGame_ae3c64a8dd73de0a99849db8ec0e9a86c}\label{classGame_ae3c64a8dd73de0a99849db8ec0e9a86c}} 
-{\bfseries Game} (QWidget $\ast$parent=0)
-\item 
-\mbox{\Hypertarget{classGame_a759ede70d6e7cb6db78eceb5c4603d9c}\label{classGame_a759ede70d6e7cb6db78eceb5c4603d9c}} 
-void {\bfseries draw\+Panel} (int x, int y, int width, int height, QColor color, double opacity)
-\item 
+\mbox{\hyperlink{classGame_ae3c64a8dd73de0a99849db8ec0e9a86c}{Game}} (QWidget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classGame}{Game}}\+:\+: \mbox{\hyperlink{classGame}{Game}} object. Crates and sets all the game components -\/ scene, player, score, health, enemies, GUI. Also creates signals for enemy spawning, updating player position, updating player projectiles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a759ede70d6e7cb6db78eceb5c4603d9c}{draw\+Panel}} (int x, int y, int width, int height, QColor color, double opacity)
+\begin{DoxyCompactList}\small\item\em Creates GUI background panel wothout any widgets. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classGame_ae730058e66f3ed1290b20e78b531f004}\label{classGame_ae730058e66f3ed1290b20e78b531f004}} 
-void {\bfseries draw\+GUI} ()
-\item 
+void \mbox{\hyperlink{classGame_ae730058e66f3ed1290b20e78b531f004}{draw\+GUI}} ()
+\begin{DoxyCompactList}\small\item\em Draws all the GUI widgets -\/ controller indicator circle, difficulty \mbox{\hyperlink{classComboBoxTxt}{Combo\+Box\+Txt}}, language \mbox{\hyperlink{classComboBoxTxt}{Combo\+Box\+Txt}}, and all the texts. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classGame_a60d93d3b7af946d169a53032d901316d}\label{classGame_a60d93d3b7af946d169a53032d901316d}} 
 void {\bfseries combo\+Box\+Change} (int index, QCombo\+Box \&language)
 \end{DoxyCompactItemize}
@@ -56,7 +54,53 @@ QGraphics\+Scene $\ast$ {\bfseries scene}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGame_ae3c64a8dd73de0a99849db8ec0e9a86c}\label{classGame_ae3c64a8dd73de0a99849db8ec0e9a86c}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classGame}{Game}}\+:\+: \mbox{\hyperlink{classGame}{Game}} object. Crates and sets all the game components -\/ scene, player, score, health, enemies, GUI. Also creates signals for enemy spawning, updating player position, updating player projectiles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGame_a759ede70d6e7cb6db78eceb5c4603d9c}\label{classGame_a759ede70d6e7cb6db78eceb5c4603d9c}} 
+\index{Game@{Game}!drawPanel@{drawPanel}}
+\index{drawPanel@{drawPanel}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{drawPanel()}{drawPanel()}}
+{\footnotesize\ttfamily void Game\+::draw\+Panel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{width,  }\item[{int}]{height,  }\item[{QColor}]{color,  }\item[{double}]{opacity }\end{DoxyParamCaption})}
+
+
+
+Creates GUI background panel wothout any widgets. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & \\
+\hline
+{\em y} & \\
+\hline
+{\em width} & \\
+\hline
+{\em height} & \\
+\hline
+{\em color} & \\
+\hline
+{\em opacity} & \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/feniks/my\+\_\+ws/6sem/\+WDS/\+Space\+Invaders/\+Space\+Invaders/\mbox{\hyperlink{Game_8h}{Game.\+h}}\item 
-/home/feniks/my\+\_\+ws/6sem/\+WDS/\+Space\+Invaders/\+Space\+Invaders/\mbox{\hyperlink{Game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}
+/home/feniks/my\+\_\+ws/6sem/\+WDS/\+Space\+Invaders/\+Space\+Invaders/inc/\mbox{\hyperlink{Game_8h}{Game.\+h}}\item 
+/home/feniks/my\+\_\+ws/6sem/\+WDS/\+Space\+Invaders/\+Space\+Invaders/src/\mbox{\hyperlink{Game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}

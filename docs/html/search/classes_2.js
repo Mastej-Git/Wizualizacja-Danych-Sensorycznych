@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['enemy_41',['Enemy',['../classEnemy.html',1,'']]],
-  ['enemycyborg_42',['EnemyCyborg',['../classEnemyCyborg.html',1,'']]],
-  ['enemysentients_43',['EnemySentients',['../classEnemySentients.html',1,'']]]
+  ['enemy_58',['Enemy',['../classEnemy.html',1,'']]],
+  ['enemycyborg_59',['EnemyCyborg',['../classEnemyCyborg.html',1,'']]],
+  ['enemysentients_60',['EnemySentients',['../classEnemySentients.html',1,'']]]
 ];

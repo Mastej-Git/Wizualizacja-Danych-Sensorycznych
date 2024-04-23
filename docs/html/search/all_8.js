@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['player_28',['Player',['../classPlayer.html',1,'']]],
-  ['player_2ecpp_29',['Player.cpp',['../Player_8cpp.html',1,'']]],
-  ['player_2eh_30',['Player.h',['../Player_8h.html',1,'']]]
+  ['keypressevent_32',['keyPressEvent',['../classPlayer.html#a4d269c4118c29b0ee85c1e0f674260ee',1,'Player']]],
+  ['keyreleaseevent_33',['keyReleaseEvent',['../classPlayer.html#a09f3d5dea93b5699138eba6f4f420b27',1,'Player']]]
 ];

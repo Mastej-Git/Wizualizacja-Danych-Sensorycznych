@@ -1,9 +1,9 @@
-<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/ComboBoxTxt.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/ComboBoxTxt.h">
-<area shape="rect" id="node1" title="This is a ComboBoxTxt with text header file. Contains deffinition of a ComboBoxTxt class." alt="" coords="151,5,363,61"/>
+<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/ComboBoxTxt.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/ComboBoxTxt.h">
+<area shape="rect" id="node1" title="ComboBoxTxt header file. ComboBox with text above it for brief desription." alt="" coords="140,5,373,61"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,109,103,136"/>
 <area shape="rect" id="node3" title=" " alt="" coords="127,109,261,136"/>
-<area shape="rect" id="node4" href="$Health_8h.html" title="This is an Health header file. Contains deffinition of an Health class." alt="" coords="285,109,356,136"/>
-<area shape="rect" id="node7" href="$Player_8h.html" title="This is a Player header file. Contains deffinition of a Player class." alt="" coords="381,109,450,136"/>
+<area shape="rect" id="node4" href="$Health_8h.html" title="Health header file. Adds info how many health point does player have. Is located in top left corner h..." alt="" coords="285,109,356,136"/>
+<area shape="rect" id="node7" href="$Player_8h.html" title="Player header file. Player is controllabe character that user can play. It can shot at move." alt="" coords="381,109,450,136"/>
 <area shape="rect" id="node5" title=" " alt="" coords="346,184,485,211"/>
 <area shape="rect" id="node6" title=" " alt="" coords="251,184,321,211"/>
 <area shape="rect" id="node8" title=" " alt="" coords="509,184,671,211"/>

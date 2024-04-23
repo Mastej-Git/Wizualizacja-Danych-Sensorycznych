@@ -1,5 +1,5 @@
-<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/Enemy.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/Enemy.h">
-<area shape="rect" id="node1" title="This is an Enemy header file. Contains deffinition of an Enemy class." alt="" coords="46,5,231,61"/>
+<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/Enemy.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/Enemy.h">
+<area shape="rect" id="node1" title="Enemy header file. Basic enemy type that spawns randomly and is weak to Flamethrower." alt="" coords="45,5,233,61"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,109,144,136"/>
 <area shape="rect" id="node3" title=" " alt="" coords="169,109,239,136"/>
 </map>

@@ -1,5 +1,5 @@
-<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/Flamethrower.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/Flamethrower.h">
-<area shape="rect" id="node1" title="This is a Flamethrower weapon header file. Contains deffinition of an Flamethrower class." alt="" coords="125,5,332,61"/>
-<area shape="rect" id="node2" href="$Flamethrower_8cpp.html" title="This is a Flamethrower weapon source file. Contains code for all the functions from header file." alt="" coords="5,109,225,165"/>
-<area shape="rect" id="node3" href="$Player_8cpp.html" title="This is a Player source file. Contains code for all the functions from header file." alt="" coords="249,109,435,165"/>
+<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/Flamethrower.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/Flamethrower.h">
+<area shape="rect" id="node1" title="Flamethrower header file. Second weapons type that works on Enemy." alt="" coords="136,5,363,61"/>
+<area shape="rect" id="node2" href="$Flamethrower_8cpp.html" title="This is a Flamethrower weapon source file. Contains code for all the functions from header file." alt="" coords="5,109,248,165"/>
+<area shape="rect" id="node3" href="$Player_8cpp.html" title="This is a Player source file. Contains code for all the functions from header file." alt="" coords="272,109,472,165"/>
 </map>

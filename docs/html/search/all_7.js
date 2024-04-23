@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainwindow_27',['MainWindow',['../classMainWindow.html',1,'MainWindow'],['../classUi_1_1MainWindow.html',1,'Ui::MainWindow']]]
+  ['increase_31',['increase',['../classScore.html#ab5dbfab6935903c075509546878cfbda',1,'Score']]]
 ];

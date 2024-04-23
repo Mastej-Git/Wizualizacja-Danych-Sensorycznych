@@ -1,5 +1,5 @@
-<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/EnemySentients.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/EnemySentients.h">
-<area shape="rect" id="node1" title="This is an EnemySentient header file. Contains deffinition of an EnemySentient class." alt="" coords="27,5,251,61"/>
+<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/EnemySentients.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/EnemySentients.h">
+<area shape="rect" id="node1" title="EnemySentients header file. Third type of enemy that spawns randomly in the game. Is weak to Laser." alt="" coords="16,5,261,61"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,109,144,136"/>
 <area shape="rect" id="node3" title=" " alt="" coords="169,109,239,136"/>
 </map>
