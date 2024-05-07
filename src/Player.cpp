@@ -12,6 +12,7 @@
 #include <QGraphicsScene>
 #include <QKeyEvent>
 #include <QDebug>
+#include <QtGamepad/QGamepad>
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
@@ -28,7 +29,7 @@
  * @brief Construct a new Player:: Player object. Sets all the key flags to false
  * 
  */
-Player::Player() {
+Player::Player(QGamepad *gamepad) {
     this->keyLeftPressed = false;
     this->keyRightPressed = false;
     this->keyUpPressed = false;
@@ -36,6 +37,8 @@ Player::Player() {
     this->keySpacebarPressed = false;
     this->keyFlamePressed = false;
     this->keyLaserPressed = false;
+
+    this->gamepad = gamepad;
 }
 
 /**
@@ -44,8 +47,18 @@ Player::Player() {
  * @param event 
  */
 void Player::keyPressEvent(QKeyEvent *event) {
+    connect(this->gamepad, &QGamepad::buttonLeftChanged, this, &Player::handleButtonLeftChange);
+    connect(this->gamepad, &QGamepad::buttonRightChanged, this, &Player::handleButtonRightChange);
+    connect(this->gamepad, &QGamepad::buttonUpChanged, this, &Player::handleButtonUpChange);
+    connect(this->gamepad, &QGamepad::buttonDownChanged, this, &Player::handleButtonDownChange);
+
+    connect(this->gamepad, &QGamepad::buttonAChanged, this, &Player::handleButtonXChange);
+    connect(this->gamepad, &QGamepad::buttonXChanged, this, &Player::handleButtonSqChange);
+    connect(this->gamepad, &QGamepad::buttonYChanged, this, &Player::handleButtonTrChange);
+
     if (event->key() == Qt::Key_Left) {
         this->keyLeftPressed = true;
+        qDebug() << "Controller key pressed";
     } else if (event->key() == Qt::Key_Right) {
         this->keyRightPressed = true;
     } else if (event->key() == Qt::Key_Up) {
@@ -68,8 +81,9 @@ void Player::keyPressEvent(QKeyEvent *event) {
  */
 void Player::keyReleaseEvent(QKeyEvent *event) {
     // Clear flags when keys are released
-    if (event->key() == Qt::Key_Left) {
+    if (event->key() == Qt::Key_Left || gamepad->buttonLeft()) {
         this->keyLeftPressed = false;
+        qDebug() << "Controller key released";
     } else if (event->key() == Qt::Key_Right) {
         this->keyRightPressed = false;
     } else if (event->key() == Qt::Key_Up) {
@@ -85,6 +99,12 @@ void Player::keyReleaseEvent(QKeyEvent *event) {
     }
 }
 
+void Player::gamepadPressEvent() {
+    connect(this->gamepad, &QGamepad::buttonLeftChanged, this, &Player::handleButtonLeftChange);
+    connect(this->gamepad, &QGamepad::buttonRightChanged, this, &Player::handleButtonRightChange);
+    connect(this->gamepad, &QGamepad::buttonUpChanged, this, &Player::handleButtonUpChange);
+    connect(this->gamepad, &QGamepad::buttonDownChanged, this, &Player::handleButtonDownChange);
+}
 /**
  * @brief Slot function to move the Player
  * 
@@ -94,7 +114,7 @@ void Player::updatePlayerPosition() {
     int dy = 0;
 
     // Calculate movement in both x and y directions
-    if (keyLeftPressed && pos().x() > 0) {
+    if (keyLeftPressed  && pos().x() > 0) {
         dx -= 5;
     }
     if (keyRightPressed && pos().x() + rect().width() < 800) {
@@ -191,4 +211,32 @@ void Player::spawn() {
         scene()->addItem(sentient_enemy);
     }
 
+}
+
+void Player::handleButtonLeftChange() {
+    this->keyLeftPressed == true ? this->keyLeftPressed = false : this->keyLeftPressed = true;
+}
+
+void Player::handleButtonRightChange() {
+    this->keyRightPressed == true ? this->keyRightPressed = false : this->keyRightPressed = true;
+}
+
+void Player::handleButtonUpChange() {
+    this->keyUpPressed == true ? this->keyUpPressed = false : this->keyUpPressed = true;
+}
+
+void Player::handleButtonDownChange() {
+    this->keyDownPressed == true ? this->keyDownPressed = false : this->keyDownPressed = true;
+}
+
+void Player::handleButtonXChange() {
+    this->keySpacebarPressed == true ? this->keySpacebarPressed = false : this->keySpacebarPressed = true;
+}
+
+void Player::handleButtonSqChange() {
+    this->keyFlamePressed == true ? this->keyFlamePressed = false : this->keyFlamePressed = true;
+}
+
+void Player::handleButtonTrChange() {
+    this->keyLaserPressed == true ? this->keyLaserPressed = false : this->keyLaserPressed = true;
 }

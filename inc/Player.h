@@ -20,6 +20,8 @@ class Player : public QObject, public QGraphicsRectItem  {
     Q_OBJECT
 public:
 
+    QGamepad *gamepad;
+
     bool keyLeftPressed;
     bool keyRightPressed;
     bool keyUpPressed;
@@ -28,15 +30,26 @@ public:
     bool keyFlamePressed;
     bool keyLaserPressed;
 
-    Player();
+    Player(QGamepad *gamepad);
 
-    void keyPressEvent (QKeyEvent *event);
-    void keyReleaseEvent (QKeyEvent *event);
+    void keyPressEvent(QKeyEvent *event);
+    void keyReleaseEvent(QKeyEvent *event);
+    void gamepadPressEvent();
 
 public slots:
     void spawn();
     void updatePlayerPosition ();
     void updatePlayerBullets ();
+
+
+    void handleButtonLeftChange();
+    void handleButtonRightChange();
+    void handleButtonUpChange();
+    void handleButtonDownChange();
+
+    void handleButtonXChange();
+    void handleButtonSqChange();
+    void handleButtonTrChange();
 };
 
 #endif // MYRECT_H

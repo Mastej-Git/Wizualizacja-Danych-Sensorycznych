@@ -42,7 +42,12 @@ Game::Game(QWidget *parent) {
     setBackgroundBrush(QColor("#050d33"));
 
     // create the player
-    this->player = new Player();
+
+    QGamepadManager *gamepad_manager = QGamepadManager::instance();
+
+    QGamepad *gamepad = new QGamepad(3302);
+
+    this->player = new Player(gamepad);
     this->player->setRect(0, 0, 100, 100);
     this->player->setPos(800/2 - this->player->rect().height()/2, 600 - this->player->rect().height());
     this->player->setFlag(QGraphicsItem::ItemIsFocusable);
