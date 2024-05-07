@@ -1,7 +1,7 @@
 /**
  * @file Health.h
  * @author Michal Mastej
- * @brief This is an Health header file. Contains deffinition of an Health class.
+ * @brief Health header file. Adds info how many health point does player have. Is located in top left corner how. 
  * @version 0.1
  * @date 2024-04-22
  * 
@@ -19,6 +19,8 @@ class Health: public QGraphicsTextItem {
 private:
     int health;
 public:
+    int *language_ptr;
+
     Health(QGraphicsItem *parent = 0);
     void decrease();
     int get_health();

@@ -16,10 +16,18 @@
 #include <QtCharts/QLineSeries>
 #include <QMainWindow>
 #include <QDebug>
+#include <QtGamepad/QGamepad>
+#include <QtGamepad/QGamepadManager>
 
 #include "../inc/Game.h"
 #include "../inc/Enemy.h"
 
+/**
+ * @brief Construct a new Game:: Game object. Crates and sets all the game components - scene, player, score, health, enemies, GUI. 
+ * Also creates signals for enemy spawning, updating player position, updating player projectiles. 
+ * 
+ * @param parent 
+ */
 Game::Game(QWidget *parent) {
 
     // create the scene
@@ -66,8 +74,36 @@ Game::Game(QWidget *parent) {
     timer2->start(100);
 
     this->drawGUI();
+
+    QGamepadManager *gamepadManager = QGamepadManager::instance();
+
+        // Check if any gamepad is connected
+        if (gamepadManager->connectedGamepads().count() > 0) {
+            qDebug() << "At least one gamepad connected.";
+
+            // You can retrieve the connected gamepads and their information
+            QList<int> gamepadIds = gamepadManager->connectedGamepads();
+
+            // For demonstration, print out the IDs of the connected gamepads
+            qDebug() << "Connected Gamepad IDs:";
+            for (int id : gamepadIds) {
+                qDebug() << "Gamepad ID:" << id;
+            }
+        } else {
+            qDebug() << "No gamepad connected.";
+        }
 }
 
+/**
+ * @brief Creates GUI background panel wothout any widgets.
+ * 
+ * @param x 
+ * @param y 
+ * @param width 
+ * @param height 
+ * @param color 
+ * @param opacity 
+ */
 void Game::drawPanel(int x, int y, int width, int height, QColor color, double opacity) {
 
     QGraphicsRectItem *panel = new QGraphicsRectItem(x, y, width, height);
@@ -79,9 +115,12 @@ void Game::drawPanel(int x, int y, int width, int height, QColor color, double o
     scene->addItem(panel);
 }
 
+/**
+ * @brief Draws all the GUI widgets - controller indicator circle, difficulty ComboBoxTxt, language ComboBoxTxt, and all the texts. 
+ * 
+ */
 void Game::drawGUI() {
     this->drawPanel(800, 0, 150, 600, Qt::black, 1);
-
 
     // controller indicator circle
     QGraphicsEllipseItem *connection_indicator = new QGraphicsEllipseItem(810, 12, 20, 20);
@@ -89,6 +128,12 @@ void Game::drawGUI() {
     connection_indicator->setPen(QPen(Qt::white, 2));
 
     scene->addItem(connection_indicator);
+
+    this->manager = new ControllerManager(connection_indicator);
+
+    QTimer *timer = new QTimer();
+    QObject::connect(timer, SIGNAL(timeout()), this->manager, SLOT(is_controller_connected()));
+    timer->start(20);
 
     // controller indicator text
     QGraphicsTextItem *controller_text = new QGraphicsTextItem("Controller");
@@ -103,7 +148,7 @@ void Game::drawGUI() {
 
     // difficulty combobox and txt
     QStringList list = {"Easy", "Medium", "Hard"};
-    this->difficulty = new ComboBoxTxt(list, "Difficulty level", 807, 277, this->health, this->player);
+    this->difficulty = new ComboBoxTxt(list, "Difficulty level", 807, 277, this->health, this->score, this->player, nullptr);
 
     QGraphicsProxyWidget *proxy1 = scene->addWidget(this->difficulty->combo_box);
     proxy1->setPos(810, 300);
@@ -112,14 +157,21 @@ void Game::drawGUI() {
     QObject::connect(this->difficulty->combo_box, SIGNAL(currentIndexChanged(int)), this->difficulty, SLOT(change_item(int)));
 
     // language combobox and txt
+
+    QGraphicsTextItem **txts_table = new QGraphicsTextItem*[5];
+    txts_table[0] = controller_text;
+    txts_table[1] = this->difficulty->text;
+
     QStringList list1 = {"Polski", "English"};
-    this->language = new ComboBoxTxt(list1, "Language", 807, 517, nullptr, this->player);
+    this->language = new ComboBoxTxt(list1, "Language", 807, 517, this->health, this->score, this->player, txts_table);
 
     QGraphicsProxyWidget *proxy2 = scene->addWidget(this->language->combo_box);
     proxy2->setPos(810, 540);
     scene->addItem(this->language->text);
 
     QObject::connect(this->language->combo_box, SIGNAL(currentIndexChanged(int)), this->language, SLOT(change_language(int)));
+
+    this->health->language_ptr = &(this->language->index);
 
     // chart
     QtCharts::QLineSeries *series = new QtCharts::QLineSeries();

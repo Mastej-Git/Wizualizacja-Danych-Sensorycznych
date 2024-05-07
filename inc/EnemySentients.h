@@ -1,7 +1,7 @@
 /**
  * @file EnemySentients.h
  * @author Michal Mastej
- * @brief This is an EnemySentient header file. Contains deffinition of an EnemySentient class
+ * @brief EnemySentients header file. Third type of enemy that spawns randomly in the game. Is weak to Laser.
  * @version 0.1
  * @date 2024-04-22
  * 

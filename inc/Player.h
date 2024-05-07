@@ -1,7 +1,7 @@
 /**
  * @file Player.h
  * @author Michal Mastej
- * @brief This is a Player header file. Contains deffinition of a Player class.
+ * @brief Player header file. Player is controllabe character that user can play. It can shot at move.
  * @version 0.1
  * @date 2024-04-22
  * 

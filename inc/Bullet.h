@@ -1,7 +1,7 @@
 /**
  * @file Bullet.h
  * @author Michal Mastej
- * @brief This is a Bullet header file. Contains deffinition of a bullet class.
+ * @brief Bullet header file. Basic weapon that user can shoot to eliminate enemies. Works on EnemyCyborg type.
  * @version 0.1
  * @date 2024-04-22
  * 

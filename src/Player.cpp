@@ -24,6 +24,10 @@
 #include "../inc/EnemyCyborg.h"
 #include "../inc/EnemySentients.h"
 
+/**
+ * @brief Construct a new Player:: Player object. Sets all the key flags to false
+ * 
+ */
 Player::Player() {
     this->keyLeftPressed = false;
     this->keyRightPressed = false;
@@ -34,6 +38,11 @@ Player::Player() {
     this->keyLaserPressed = false;
 }
 
+/**
+ * @brief Listens and sets the key flags to true on press
+ * 
+ * @param event 
+ */
 void Player::keyPressEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Left) {
         this->keyLeftPressed = true;
@@ -52,6 +61,11 @@ void Player::keyPressEvent(QKeyEvent *event) {
     }
 }
 
+/**
+ * @brief Listens and sets the key flags to false on release
+ * 
+ * @param event 
+ */
 void Player::keyReleaseEvent(QKeyEvent *event) {
     // Clear flags when keys are released
     if (event->key() == Qt::Key_Left) {
@@ -71,6 +85,10 @@ void Player::keyReleaseEvent(QKeyEvent *event) {
     }
 }
 
+/**
+ * @brief Slot function to move the Player
+ * 
+ */
 void Player::updatePlayerPosition() {
     int dx = 0;
     int dy = 0;
@@ -93,6 +111,10 @@ void Player::updatePlayerPosition() {
     setPos(x() + dx, y() + dy);
 }
 
+/**
+ * @brief Slot function to move the bullets
+ * 
+ */
 void Player::updatePlayerBullets() {
     if (keySpacebarPressed) {
         Bullet *bullet = new Bullet();
@@ -145,6 +167,10 @@ void Player::updatePlayerBullets() {
 //    }
 //}
 
+/**
+ * @brief Slot position to spawn all the enemy types
+ * 
+ */
 void Player::spawn() {
 
     int rand_numb = rand() % 3 + 1;

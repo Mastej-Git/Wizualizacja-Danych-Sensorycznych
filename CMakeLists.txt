@@ -40,6 +40,8 @@ set(PROJECT_SOURCES
         inc/EnemySentients.h
         src/ComboBoxTxt.cpp
         inc/ComboBoxTxt.h
+        src/ControllerManager.cpp
+        inc/ControllerManager.h
         mainwindow.ui
 )
 

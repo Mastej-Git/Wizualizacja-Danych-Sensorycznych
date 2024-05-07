@@ -1,7 +1,7 @@
 /**
  * @file Laser.h
  * @author your name (you@domain.com)
- * @brief This is an Laser weapon header file. Contains deffinition of an Laser class.
+ * @brief Laser header file. Third wapon type that player can use. Works on Enemy Sentients.
  * @version 0.1
  * @date 2024-04-22
  * 

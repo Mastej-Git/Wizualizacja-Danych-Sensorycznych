@@ -19,6 +19,10 @@
 
 extern Game *game;
 
+/**
+ * @brief Construct a new Enemy Sentients:: Enemy Sentients object
+ * 
+ */
 EnemySentients::EnemySentients() {
 
     srand(time(NULL));
@@ -34,6 +38,10 @@ EnemySentients::EnemySentients() {
     timer->start(50);
 }
 
+/**
+ * @brief Function to set starting position of the EnemySentients and check for collision with player and screen boundries.
+ * 
+ */
 void EnemySentients::move() {
     setPos(x(), y() + rand() % 5 + 3);
 

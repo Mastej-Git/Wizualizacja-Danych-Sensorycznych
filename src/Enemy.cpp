@@ -1,7 +1,7 @@
 /**
  * @file Enemy.cpp
  * @author Michal Mastej
- * @brief This is an basic Enemy source file. Contains code for all the functions from header file.
+ * @brief Enemy source file.
  * @version 0.1
  * @date 2024-04-22
  * 
@@ -19,6 +19,10 @@
 
 extern Game *game;
 
+/**
+ * @brief Construct a new Enemy:: Enemy object
+ * 
+ */
 Enemy::Enemy() {
 
     srand(time(NULL));
@@ -34,6 +38,10 @@ Enemy::Enemy() {
     timer->start(50);
 }
 
+/**
+ * @brief Function to set starting position of the Enemy and check for collision with player and screen boundries.
+ * 
+ */
 void Enemy::move() {
     setPos(x(), y() + rand() % 5 + 3);
 

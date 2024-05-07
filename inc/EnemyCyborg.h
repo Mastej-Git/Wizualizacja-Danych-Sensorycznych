@@ -1,7 +1,7 @@
 /**
  * @file EnemyCyborg.h
  * @author Michal Mastej
- * @brief This is an EnemyCyborg header file. Contains deffinition of an EnemyCyborg class
+ * @brief EnemyCyborg header file. Second enemy type that spawns randomly. Is weak to Bullet.
  * @version 0.1
  * @date 2024-04-22
  * 

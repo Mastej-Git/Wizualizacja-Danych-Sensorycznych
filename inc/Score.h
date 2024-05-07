@@ -1,7 +1,7 @@
 /**
  * @file Score.h
  * @author Michal Mastej
- * @brief This is an Score header file. Contains deffinition of an Health class.
+ * @brief Score header file. Displays score points earned by player by shooting down enemys.
  * @version 0.1
  * @date 2024-04-22
  * 

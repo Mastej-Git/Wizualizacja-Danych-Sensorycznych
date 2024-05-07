@@ -1,7 +1,7 @@
 /**
  * @file Enemy.h
  * @author Michal Mastej
- * @brief This is an Enemy header file. Contains deffinition of an Enemy class.
+ * @brief Enemy header file. Basic enemy type that spawns randomly and is weak to Flamethrower.
  * @version 0.1
  * @date 2024-04-22
  * 

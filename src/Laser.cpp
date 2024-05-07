@@ -19,6 +19,10 @@
 
 extern Game *game;
 
+/**
+ * @brief Construct a new Laser:: Laser object
+ * 
+ */
 Laser::Laser() {
 
     setRect(10 - rect().width()/2, -500, 80, 500);
@@ -29,6 +33,10 @@ Laser::Laser() {
     timer->start(50);
 }
 
+/**
+ * @brief Function to move the Laser and check for collision with other objects or boundries of the screen.
+ * 
+ */
 void Laser::move() {
 
     QList<QGraphicsItem *> colliding_items = collidingItems();

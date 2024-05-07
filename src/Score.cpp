@@ -13,6 +13,11 @@
 
 #include "../inc/Score.h"
 
+/**
+ * @brief Construct a new Score:: Score object
+ * 
+ * @param parent 
+ */
 Score::Score(QGraphicsItem *parent): QGraphicsTextItem(parent) {
     this->score = 0;
 
@@ -22,11 +27,21 @@ Score::Score(QGraphicsItem *parent): QGraphicsTextItem(parent) {
     setFont(QFont("Times[Adobe]", 16));
 }
 
+/**
+ * @brief Returns health number
+ * 
+ * @return int 
+ */
 void Score::increase() {
     this->score += 10;
     setPlainText(QString("Score: ") + QString::number(this->score));
 }
 
+/**
+ * @brief Sets health points
+ * 
+ * @param health 
+ */
 int Score::get_score() {
     return this->score;
 }

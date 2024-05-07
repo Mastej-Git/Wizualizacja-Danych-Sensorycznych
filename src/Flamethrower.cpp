@@ -19,6 +19,12 @@
 
 extern Game *game;
 
+/**
+ * @brief Construct a new Flamethrower:: Flamethrower object
+ * 
+ * @param x_move describes which way should the Flamethrower particle go on X axis
+ * @param y_move describes which way should the Flamethrower particle go on Y axis
+ */
 Flamethrower::Flamethrower(double x_move, double y_move) {
     setRect(50 - rect().width()/2, 0, 10, 10);
 
@@ -31,6 +37,10 @@ Flamethrower::Flamethrower(double x_move, double y_move) {
     timer->start(50);
 }
 
+/**
+ * @brief Function to move the Flamthrower and check for collision with other objects or boundries of the screen.
+ * 
+ */
 void Flamethrower::move() {
 
     QList<QGraphicsItem *> colliding_items = collidingItems();

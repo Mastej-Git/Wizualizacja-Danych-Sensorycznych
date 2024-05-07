@@ -13,8 +13,14 @@
 
 #include "../inc/Health.h"
 
+/**
+ * @brief Construct a new Health:: Health object
+ * 
+ * @param parent 
+ */
 Health::Health(QGraphicsItem *parent): QGraphicsTextItem(parent) {
     this->health = 5;
+    this->language_ptr = nullptr;
 
     // draw the text
     setPlainText(QString("Health: ") + QString::number(this->health));
@@ -23,15 +29,30 @@ Health::Health(QGraphicsItem *parent): QGraphicsTextItem(parent) {
     setFont(QFont("Times[Adobe]", 16));
 }
 
+/**
+ * @brief Decreases health when any enemy type touches the Player.
+ * 
+ */
 void Health::decrease() {
     this->health--;
-    setPlainText(QString("Health: ") + QString::number(this->health));
+    if (*(this->language_ptr) == 1) setPlainText(QString("Health: ") + QString::number(this->health));
+    else setPlainText(QString("Zdrowie: ") + QString::number(this->health));
 }
 
+/**
+ * @brief Returns health points
+ * 
+ * @return int 
+ */
 int Health::get_health() {
     return this->health;
 }
 
+/**
+ * @brief Sets health points
+ * 
+ * @param health 
+ */
 void Health::set_heath(int health) {
     this->health = health;
     setPlainText(QString("Health: ") + QString::number(this->health));

@@ -1,7 +1,7 @@
 /**
  * @file ComboBoxTxt.cpp
  * @author Michal Mastej
- * @brief This is a ComboBoxTxt with text source file. Contains code for all the functions from header file.
+ * @brief ComboBoxTxt source file.
  * @version 0.1
  * @date 2024-04-22
  * 
@@ -12,7 +12,17 @@
 #include "../inc/ComboBoxTxt.h"
 #include "QDebug"
 
-ComboBoxTxt::ComboBoxTxt(QStringList list, QString text, int x, int y, Health *health, Player *player) {
+/**
+ * @brief Construct a new Combo Box Txt:: Combo Box Txt object
+ * 
+ * @param list List of object that should be contained by the ComboBox
+ * @param text Text Displayed above ComboBox
+ * @param x ComboBox x position
+ * @param y ComboBox y position
+ * @param health Health pointer to change the health points
+ * @param player Player pointer to return focus on the player character
+ */
+ComboBoxTxt::ComboBoxTxt(QStringList list, QString text, int x, int y, Health *health, Score *score, Player *player, QGraphicsTextItem **texts_table) {
 
     this->combo_box = new QComboBox();
 
@@ -33,9 +43,19 @@ ComboBoxTxt::ComboBoxTxt(QStringList list, QString text, int x, int y, Health *h
     this->text->setFont(QFont("Times[Adobe]", 9));
 
     this->health = health;
+    this->score = score;
     this->player = player;
+
+    this->texts_table = texts_table;
+
+    this->index = 1;
 }
 
+/**
+ * @brief Signal function to obatin index of the chosen item from difficulty ComboBoxTxt
+ * 
+ * @param index Index of the chosen item.
+ */
 void ComboBoxTxt::change_item(int index) {
     if (index == 0) {
         this->health->set_heath(5);
@@ -49,12 +69,29 @@ void ComboBoxTxt::change_item(int index) {
     this->player->setFocus();
 }
 
+/**
+ * @brief Signal function to obatin index of the chosen item from language ComboBoxTxt
+ * 
+ * @param index index of the chosen item.
+ */
 void ComboBoxTxt::change_language(int index) {
     if (index == 0) {
         qDebug() << "Zmieniono język na Polski";
+        this->index = 0;
+        this->health->setPlainText(QString("Zdrowie: ") + QString::number(this->health->get_health()));
+        this->score->setPlainText(QString("Punkty: ") + QString::number(this->score->get_score()));
+        this->text->setPlainText(QString("Jezyk"));
+        this->texts_table[0]->setPlainText(QString("Kontroler"));
+        this->texts_table[1]->setPlainText(QString("Poziom trudnosci"));
     }
     else {
+        this->index = 1;
         qDebug() << "Changed language to english";
+        this->health->setPlainText(QString("Health: ") + QString::number(this->health->get_health()));
+        this->score->setPlainText(QString("Score: ") + QString::number(this->score->get_score()));
+        this->text->setPlainText(QString("Language"));
+        this->texts_table[0]->setPlainText(QString("Controller"));
+        this->texts_table[1]->setPlainText(QString("Difficulty level"));
     }
 
     this->player->setFocus();

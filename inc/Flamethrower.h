@@ -1,7 +1,7 @@
 /**
  * @file Flamethrower.h
  * @author Michal Mastej
- * @brief This is a Flamethrower weapon header file. Contains deffinition of an Flamethrower class
+ * @brief Flamethrower header file. Second weapons type that works on Enemy.
  * @version 0.1
  * @date 2024-04-22
  * 

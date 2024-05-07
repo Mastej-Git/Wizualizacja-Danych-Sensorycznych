@@ -1,7 +1,7 @@
 /**
  * @file Bullet.cpp
  * @author Michal Mastej
- * @brief This is a Bullet source file. Contains code for all the functions from header file.
+ * @brief Source file for Bullet funtions.
  * @version 0.1
  * @date 2024-04-22
  * 
@@ -21,6 +21,10 @@
 
 extern Game *game;
 
+/**
+ * @brief Construct a new Bullet:: Bullet object
+ * 
+ */
 Bullet::Bullet() {
     setRect(50 - rect().width()/2, 0, 10, 50);
 
@@ -30,6 +34,11 @@ Bullet::Bullet() {
     timer->start(50);
 }
 
+
+/**
+ * @brief Function to move the Bullet and check for collision with other objects or boundries of the screen.
+ * 
+ */
 void Bullet::move() {
 
     QList<QGraphicsItem *> colliding_items = collidingItems();

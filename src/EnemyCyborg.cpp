@@ -19,6 +19,10 @@
 
 extern Game *game;
 
+/**
+ * @brief Construct a new Enemy Cyborg:: Enemy Cyborg object
+ * 
+ */
 EnemyCyborg::EnemyCyborg() {
 
     srand(time(NULL));
@@ -34,6 +38,10 @@ EnemyCyborg::EnemyCyborg() {
     timer->start(50);
 }
 
+/**
+ * @brief Function to set starting position of the EnemyCyborg and check for collision with player and screen boundries.
+ * 
+ */
 void EnemyCyborg::move() {
     setPos(x(), y() + rand() % 5 + 3);
 

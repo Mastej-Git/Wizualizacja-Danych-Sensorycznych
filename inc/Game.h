@@ -1,7 +1,7 @@
 /**
  * @file Game.h
  * @author Michal Mastej
- * @brief This is a Game header file. Contains deffinition of an Game class.
+ * @brief Game header file. Game is main class in which game tooks place.
  * @version 0.1
  * @date 2024-04-22
  * 
@@ -23,6 +23,7 @@
 #include "Score.h"
 #include "Health.h"
 #include "ComboBoxTxt.h"
+#include "ControllerManager.h"
 
 class Game : public QGraphicsView {
 public:
@@ -31,6 +32,7 @@ public:
     Score *score;
     Health *health;
     ComboBoxTxt *difficulty, *language;
+    ControllerManager *manager;
 
     Game(QWidget *parent = 0);
 
