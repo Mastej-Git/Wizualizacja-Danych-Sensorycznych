@@ -53,8 +53,11 @@ void Player::keyPressEvent(QKeyEvent *event) {
     connect(this->gamepad, &QGamepad::buttonDownChanged, this, &Player::handleButtonDownChange);
 
     connect(this->gamepad, &QGamepad::buttonAChanged, this, &Player::handleButtonXChange);
-    connect(this->gamepad, &QGamepad::buttonXChanged, this, &Player::handleButtonSqChange);
-    connect(this->gamepad, &QGamepad::buttonYChanged, this, &Player::handleButtonTrChange);
+    connect(this->gamepad, &QGamepad::buttonXChanged, this, &Player::handleButtonTrChange);
+    connect(this->gamepad, &QGamepad::buttonYChanged, this, &Player::handleButtonSqChange);
+
+    connect(this->gamepad, &QGamepad::axisLeftXChanged, this, &Player::handleXAxisLeftThumbstick);
+    connect(this->gamepad, &QGamepad::axisLeftYChanged, this, &Player::handleYAxisLeftThumbstick);
 
     if (event->key() == Qt::Key_Left) {
         this->keyLeftPressed = true;
@@ -239,4 +242,30 @@ void Player::handleButtonSqChange() {
 
 void Player::handleButtonTrChange() {
     this->keyLaserPressed == true ? this->keyLaserPressed = false : this->keyLaserPressed = true;
+}
+
+void Player::handleXAxisLeftThumbstick(double value) {
+    if (value > 0.5) {
+       this->keyRightPressed = true;
+    }
+    else if (value < 0.5 && value > -0.5) {
+        this->keyRightPressed = false;
+        this->keyLeftPressed = false;
+    }
+    else if (value < -0.5) {
+        this->keyLeftPressed = true;
+    }
+}
+
+void Player::handleYAxisLeftThumbstick(double value) {
+    if (value > 0.5) {
+       this->keyDownPressed = true;
+    }
+    else if (value < 0.5 && value > -0.5) {
+        this->keyDownPressed = false;
+        this->keyUpPressed = false;
+    }
+    else if (value < -0.5) {
+        this->keyUpPressed = true;
+    }
 }
