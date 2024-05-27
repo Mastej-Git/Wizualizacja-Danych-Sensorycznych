@@ -85,35 +85,40 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Score_8h.html">Score.h</a>&quot;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Health_8h.html">Health.h</a>&quot;</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ComboBoxTxt_8h.html">ComboBoxTxt.h</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classGame.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGame.html">Game</a> : <span class="keyword">public</span> QGraphicsView {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    QGraphicsScene *scene;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classPlayer.html">Player</a> *player;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classScore.html">Score</a> *score;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classHealth.html">Health</a> *health;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classComboBoxTxt.html">ComboBoxTxt</a> *difficulty, *language;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classGame.html#ae3c64a8dd73de0a99849db8ec0e9a86c">Game</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;ControllerManager.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classGame.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGame.html">Game</a> : <span class="keyword">public</span> QGraphicsView {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    QGraphicsScene *scene;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classPlayer.html">Player</a> *player;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classScore.html">Score</a> *score;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classHealth.html">Health</a> *health;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classComboBoxTxt.html">ComboBoxTxt</a> *difficulty, *language;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classControllerManager.html">ControllerManager</a> *manager;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGame.html#a759ede70d6e7cb6db78eceb5c4603d9c">drawPanel</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, QColor color, <span class="keywordtype">double</span> opacity);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGame.html#ae730058e66f3ed1290b20e78b531f004">drawGUI</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> comboBoxChange(<span class="keywordtype">int</span> index, QComboBox &amp;language);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// GAME_H</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classGame.html#ae3c64a8dd73de0a99849db8ec0e9a86c">Game</a>(QWidget *parent = 0);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGame.html#a759ede70d6e7cb6db78eceb5c4603d9c">drawPanel</a>(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height, QColor color, <span class="keywordtype">double</span> opacity);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGame.html#ae730058e66f3ed1290b20e78b531f004">drawGUI</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> comboBoxChange(<span class="keywordtype">int</span> index, QComboBox &amp;language);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> resizeEvent(QResizeEvent *event);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// GAME_H</span></div>
 <div class="ttc" id="aComboBoxTxt_8h_html"><div class="ttname"><a href="ComboBoxTxt_8h.html">ComboBoxTxt.h</a></div><div class="ttdoc">ComboBoxTxt header file. ComboBox with text above it for brief desription.</div></div>
 <div class="ttc" id="aHealth_8h_html"><div class="ttname"><a href="Health_8h.html">Health.h</a></div><div class="ttdoc">Health header file. Adds info how many health point does player have. Is located in top left corner h...</div></div>
 <div class="ttc" id="aPlayer_8h_html"><div class="ttname"><a href="Player_8h.html">Player.h</a></div><div class="ttdoc">Player header file. Player is controllabe character that user can play. It can shot at move.</div></div>
 <div class="ttc" id="aScore_8h_html"><div class="ttname"><a href="Score_8h.html">Score.h</a></div><div class="ttdoc">Score header file. Displays score points earned by player by shooting down enemys.</div></div>
-<div class="ttc" id="aclassComboBoxTxt_html"><div class="ttname"><a href="classComboBoxTxt.html">ComboBoxTxt</a></div><div class="ttdef"><b>Definition:</b> ComboBoxTxt.h:21</div></div>
-<div class="ttc" id="aclassGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdef"><b>Definition:</b> Game.h:27</div></div>
-<div class="ttc" id="aclassGame_html_a759ede70d6e7cb6db78eceb5c4603d9c"><div class="ttname"><a href="classGame.html#a759ede70d6e7cb6db78eceb5c4603d9c">Game::drawPanel</a></div><div class="ttdeci">void drawPanel(int x, int y, int width, int height, QColor color, double opacity)</div><div class="ttdoc">Creates GUI background panel wothout any widgets.</div><div class="ttdef"><b>Definition:</b> Game.cpp:87</div></div>
-<div class="ttc" id="aclassGame_html_ae3c64a8dd73de0a99849db8ec0e9a86c"><div class="ttname"><a href="classGame.html#ae3c64a8dd73de0a99849db8ec0e9a86c">Game::Game</a></div><div class="ttdeci">Game(QWidget *parent=0)</div><div class="ttdoc">Construct a new Game:: Game object. Crates and sets all the game components - scene,...</div><div class="ttdef"><b>Definition:</b> Game.cpp:29</div></div>
-<div class="ttc" id="aclassGame_html_ae730058e66f3ed1290b20e78b531f004"><div class="ttname"><a href="classGame.html#ae730058e66f3ed1290b20e78b531f004">Game::drawGUI</a></div><div class="ttdeci">void drawGUI()</div><div class="ttdoc">Draws all the GUI widgets - controller indicator circle, difficulty ComboBoxTxt, language ComboBoxTxt...</div><div class="ttdef"><b>Definition:</b> Game.cpp:102</div></div>
+<div class="ttc" id="aclassComboBoxTxt_html"><div class="ttname"><a href="classComboBoxTxt.html">ComboBoxTxt</a></div><div class="ttdef"><b>Definition:</b> ComboBoxTxt.h:22</div></div>
+<div class="ttc" id="aclassControllerManager_html"><div class="ttname"><a href="classControllerManager.html">ControllerManager</a></div><div class="ttdef"><b>Definition:</b> ControllerManager.h:7</div></div>
+<div class="ttc" id="aclassGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdef"><b>Definition:</b> Game.h:28</div></div>
+<div class="ttc" id="aclassGame_html_a759ede70d6e7cb6db78eceb5c4603d9c"><div class="ttname"><a href="classGame.html#a759ede70d6e7cb6db78eceb5c4603d9c">Game::drawPanel</a></div><div class="ttdeci">void drawPanel(int x, int y, int width, int height, QColor color, double opacity)</div><div class="ttdoc">Creates GUI background panel wothout any widgets.</div><div class="ttdef"><b>Definition:</b> Game.cpp:112</div></div>
+<div class="ttc" id="aclassGame_html_ae3c64a8dd73de0a99849db8ec0e9a86c"><div class="ttname"><a href="classGame.html#ae3c64a8dd73de0a99849db8ec0e9a86c">Game::Game</a></div><div class="ttdeci">Game(QWidget *parent=0)</div><div class="ttdoc">Construct a new Game:: Game object. Crates and sets all the game components - scene,...</div><div class="ttdef"><b>Definition:</b> Game.cpp:31</div></div>
+<div class="ttc" id="aclassGame_html_ae730058e66f3ed1290b20e78b531f004"><div class="ttname"><a href="classGame.html#ae730058e66f3ed1290b20e78b531f004">Game::drawGUI</a></div><div class="ttdeci">void drawGUI()</div><div class="ttdoc">Draws all the GUI widgets - controller indicator circle, difficulty ComboBoxTxt, language ComboBoxTxt...</div><div class="ttdef"><b>Definition:</b> Game.cpp:127</div></div>
 <div class="ttc" id="aclassHealth_html"><div class="ttname"><a href="classHealth.html">Health</a></div><div class="ttdef"><b>Definition:</b> Health.h:18</div></div>
 <div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdef"><b>Definition:</b> Player.h:19</div></div>
-<div class="ttc" id="aclassScore_html"><div class="ttname"><a href="classScore.html">Score</a></div><div class="ttdef"><b>Definition:</b> Score.h:17</div></div>
+<div class="ttc" id="aclassScore_html"><div class="ttname"><a href="classScore.html">Score</a></div><div class="ttdef"><b>Definition:</b> Score.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

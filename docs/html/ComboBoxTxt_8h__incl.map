@@ -1,10 +1,12 @@
 <map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/ComboBoxTxt.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/ComboBoxTxt.h">
-<area shape="rect" id="node1" title="ComboBoxTxt header file. ComboBox with text above it for brief desription." alt="" coords="140,5,373,61"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,109,103,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="127,109,261,136"/>
-<area shape="rect" id="node4" href="$Health_8h.html" title="Health header file. Adds info how many health point does player have. Is located in top left corner h..." alt="" coords="285,109,356,136"/>
-<area shape="rect" id="node7" href="$Player_8h.html" title="Player header file. Player is controllabe character that user can play. It can shot at move." alt="" coords="381,109,450,136"/>
-<area shape="rect" id="node5" title=" " alt="" coords="346,184,485,211"/>
-<area shape="rect" id="node6" title=" " alt="" coords="251,184,321,211"/>
-<area shape="rect" id="node8" title=" " alt="" coords="509,184,671,211"/>
+<area shape="rect" id="node1" title="ComboBoxTxt header file. ComboBox with text above it for brief desription." alt="" coords="104,5,337,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="15,109,112,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,184,140,211"/>
+<area shape="rect" id="node4" href="$Health_8h.html" title="Health header file. Adds info how many health point does player have. Is located in top left corner h..." alt="" coords="301,109,372,136"/>
+<area shape="rect" id="node7" href="$Score_8h.html" title="Score header file. Displays score points earned by player by shooting down enemys." alt="" coords="187,109,254,136"/>
+<area shape="rect" id="node9" href="$Player_8h.html" title="Player header file. Player is controllabe character that user can play. It can shot at move." alt="" coords="414,109,483,136"/>
+<area shape="rect" id="node5" title=" " alt="" coords="397,184,535,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="301,184,372,211"/>
+<area shape="rect" id="node8" title=" " alt="" coords="164,184,277,211"/>
+<area shape="rect" id="node10" title=" " alt="" coords="559,184,722,211"/>
 </map>

@@ -13,7 +13,9 @@
 #define SCORE_H
 
 #include <QGraphicsTextItem>
+#include <QGraphicsView>
 
+// , public QGraphicsView
 class Score: public QGraphicsTextItem {
 private:
     int score;
@@ -21,6 +23,8 @@ public:
     Score(QGraphicsItem *parent = 0);
     void increase();
     int get_score();
+
+//    void resizeEvent(QResizeEvent* event);
 };
 
 #endif // SCORE_H

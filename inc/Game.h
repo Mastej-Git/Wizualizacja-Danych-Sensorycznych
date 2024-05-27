@@ -39,6 +39,10 @@ public:
     void drawPanel(int x, int y, int width, int height, QColor color, double opacity);
     void drawGUI();
     void comboBoxChange(int index, QComboBox &language);
+
+    void resizeEvent(QResizeEvent *event);
+public slots:
+    void updateGraph();
 };
 
 #endif // GAME_H

@@ -1,4 +1,5 @@
 <map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/Score.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/Score.h">
-<area shape="rect" id="node1" title="Score header file. Displays score points earned by player by shooting down enemys." alt="" coords="5,5,191,61"/>
-<area shape="rect" id="node2" title=" " alt="" coords="31,109,165,136"/>
+<area shape="rect" id="node1" title="Score header file. Displays score points earned by player by shooting down enemys." alt="" coords="53,5,239,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,109,140,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="164,109,277,136"/>
 </map>

@@ -26,7 +26,7 @@
 #include "../inc/EnemySentients.h"
 
 /**
- * @brief Construct a new Player:: Player object. Sets all the key flags to false
+ * @brief Construct a new Player:: Player object. Sets all the key flags to false and connects the gamepad
  * 
  */
 Player::Player(QGamepad *gamepad) {
@@ -42,7 +42,7 @@ Player::Player(QGamepad *gamepad) {
 }
 
 /**
- * @brief Listens and sets the key flags to true on press
+ * @brief Listens and sets the key flags to true on press and reads the controller inputs
  * 
  * @param event 
  */
@@ -61,7 +61,7 @@ void Player::keyPressEvent(QKeyEvent *event) {
 
     if (event->key() == Qt::Key_Left) {
         this->keyLeftPressed = true;
-        qDebug() << "Controller key pressed";
+//        qDebug() << "Controller key pressed";
     } else if (event->key() == Qt::Key_Right) {
         this->keyRightPressed = true;
     } else if (event->key() == Qt::Key_Up) {
@@ -86,7 +86,7 @@ void Player::keyReleaseEvent(QKeyEvent *event) {
     // Clear flags when keys are released
     if (event->key() == Qt::Key_Left || gamepad->buttonLeft()) {
         this->keyLeftPressed = false;
-        qDebug() << "Controller key released";
+//        qDebug() << "Controller key released";
     } else if (event->key() == Qt::Key_Right) {
         this->keyRightPressed = false;
     } else if (event->key() == Qt::Key_Up) {
@@ -120,13 +120,13 @@ void Player::updatePlayerPosition() {
     if (keyLeftPressed  && pos().x() > 0) {
         dx -= 5;
     }
-    if (keyRightPressed && pos().x() + rect().width() < 800) {
+    if (keyRightPressed && pos().x() + 100 < 800) {
         dx += 5;
     }
     if (keyUpPressed && pos().y() > 0) {
         dy -= 5;
     }
-    if (keyDownPressed && pos().y() + rect().height() < 600) {
+    if (keyDownPressed && pos().y() + 100 < 600) {
         dy += 5;
     }
 
@@ -216,33 +216,66 @@ void Player::spawn() {
 
 }
 
+/**
+ * @brief Player::handleButtonLeftChange Signal to change the Left controll state (true/false)
+ */
+
 void Player::handleButtonLeftChange() {
     this->keyLeftPressed == true ? this->keyLeftPressed = false : this->keyLeftPressed = true;
 }
+
+/**
+ * @brief Player::handleButtonRightChange Signal to change the Right controll state (true/false)
+ */
 
 void Player::handleButtonRightChange() {
     this->keyRightPressed == true ? this->keyRightPressed = false : this->keyRightPressed = true;
 }
 
+/**
+ * @brief Player::handleButtonUpChange Signal to change the Up controll state (true/false)
+ */
+
 void Player::handleButtonUpChange() {
     this->keyUpPressed == true ? this->keyUpPressed = false : this->keyUpPressed = true;
 }
+
+/**
+ * @brief Player::handleButtonDownChange Signal to change the Down controll state (true/false)
+ */
 
 void Player::handleButtonDownChange() {
     this->keyDownPressed == true ? this->keyDownPressed = false : this->keyDownPressed = true;
 }
 
+/**
+ * @brief Player::handleButtonXChange Signal to change the fire Bullet controll state (true/false)
+ */
+
 void Player::handleButtonXChange() {
     this->keySpacebarPressed == true ? this->keySpacebarPressed = false : this->keySpacebarPressed = true;
 }
+
+/**
+ * @brief Player::handleButtonSqChange Signal to change the fire Flamethrower controll state (true/false)
+ */
 
 void Player::handleButtonSqChange() {
     this->keyFlamePressed == true ? this->keyFlamePressed = false : this->keyFlamePressed = true;
 }
 
+/**
+ * @brief Player::handleButtonTrChange Signal to change the fire Laser controll state (true/false)
+ */
+
 void Player::handleButtonTrChange() {
     this->keyLaserPressed == true ? this->keyLaserPressed = false : this->keyLaserPressed = true;
 }
+
+/**
+ * @brief Player::handleXAxisLeftThumbstick Signal to read the X axis thumbstick value
+ * @param value thumbstick value (-1.0 - 1.0)
+ */
 
 void Player::handleXAxisLeftThumbstick(double value) {
     if (value > 0.5) {
@@ -256,6 +289,11 @@ void Player::handleXAxisLeftThumbstick(double value) {
         this->keyLeftPressed = true;
     }
 }
+
+/**
+ * @brief Player::handleYAxisLeftThumbstick Signal to read the X axis thumbstick value
+ * @param value thumbstick value (-1.0 - 1.0)
+ */
 
 void Player::handleYAxisLeftThumbstick(double value) {
     if (value > 0.5) {

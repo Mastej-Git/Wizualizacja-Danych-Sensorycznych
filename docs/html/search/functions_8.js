@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['keypressevent_112',['keyPressEvent',['../classPlayer.html#a4d269c4118c29b0ee85c1e0f674260ee',1,'Player']]],
-  ['keyreleaseevent_113',['keyReleaseEvent',['../classPlayer.html#a09f3d5dea93b5699138eba6f4f420b27',1,'Player']]]
+  ['keypressevent_132',['keyPressEvent',['../classPlayer.html#a4d269c4118c29b0ee85c1e0f674260ee',1,'Player']]],
+  ['keyreleaseevent_133',['keyReleaseEvent',['../classPlayer.html#a09f3d5dea93b5699138eba6f4f420b27',1,'Player']]]
 ];

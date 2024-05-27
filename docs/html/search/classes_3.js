@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flamethrower_61',['Flamethrower',['../classFlamethrower.html',1,'']]]
+  ['flamethrower_72',['Flamethrower',['../classFlamethrower.html',1,'']]]
 ];

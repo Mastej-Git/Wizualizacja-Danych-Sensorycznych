@@ -23,8 +23,8 @@ Score::Score(QGraphicsItem *parent): QGraphicsTextItem(parent) {
 
     // draw the text
     setPlainText(QString("Score: ") + QString::number(this->score));
-    setDefaultTextColor(Qt::blue);
-    setFont(QFont("Times[Adobe]", 16));
+    setDefaultTextColor(Qt::cyan);
+    QGraphicsTextItem::setFont(QFont("Times[Adobe]", 16));
 }
 
 /**
@@ -45,3 +45,10 @@ void Score::increase() {
 int Score::get_score() {
     return this->score;
 }
+
+//void Score::resizeEvent(QResizeEvent* event) {
+//        QGraphicsView::resizeEvent(event);
+//        QRect viewportRect = viewport()->rect();
+//        QPointF newPos = QGraphicsView::mapToScene(viewportRect.topLeft() + QPoint(10, 10)); // Adjust these coordinates as needed
+//        setPos(newPos);
+//    }

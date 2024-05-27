@@ -1,8 +1,9 @@
 <map id="ComboBoxTxt" name="ComboBoxTxt">
-<area shape="rect" id="node1" title=" " alt="" coords="89,171,195,197"/>
+<area shape="rect" id="node1" title=" " alt="" coords="153,171,259,197"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,76,32"/>
-<area shape="rect" id="node5" href="$classPlayer.html" title=" " alt="" coords="113,81,171,108"/>
-<area shape="rect" id="node3" href="$classHealth.html" title=" " alt="" coords="277,81,337,108"/>
+<area shape="rect" id="node5" href="$classPlayer.html" title=" " alt="" coords="135,81,194,108"/>
+<area shape="rect" id="node3" href="$classHealth.html" title=" " alt="" coords="219,81,279,108"/>
 <area shape="rect" id="node4" title=" " alt="" coords="264,5,399,32"/>
+<area shape="rect" id="node7" href="$classScore.html" title=" " alt="" coords="303,81,359,108"/>
 <area shape="rect" id="node6" title=" " alt="" coords="101,5,239,32"/>
 </map>

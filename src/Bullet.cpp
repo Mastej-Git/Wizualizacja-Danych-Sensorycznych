@@ -26,7 +26,7 @@ extern Game *game;
  * 
  */
 Bullet::Bullet() {
-    setRect(50 - rect().width()/2, 0, 10, 50);
+    setRect(50 - rect().width()/2, 0, 10, 40);
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(move()));

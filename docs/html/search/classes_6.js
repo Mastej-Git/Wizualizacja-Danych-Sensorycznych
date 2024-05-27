@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['laser_64',['Laser',['../classLaser.html',1,'']]]
+  ['laser_75',['Laser',['../classLaser.html',1,'']]]
 ];

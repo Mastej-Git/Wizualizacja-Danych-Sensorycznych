@@ -75,9 +75,9 @@ void ComboBoxTxt::change_item(int index) {
  * @param index index of the chosen item.
  */
 void ComboBoxTxt::change_language(int index) {
-    if (index == 0) {
-        qDebug() << "Zmieniono język na Polski";
-        this->index = 0;
+    if (index == 1) {
+//        qDebug() << "Zmieniono język na Polski";
+        this->index = 1;
         this->health->setPlainText(QString("Zdrowie: ") + QString::number(this->health->get_health()));
         this->score->setPlainText(QString("Punkty: ") + QString::number(this->score->get_score()));
         this->text->setPlainText(QString("Jezyk"));
@@ -85,8 +85,8 @@ void ComboBoxTxt::change_language(int index) {
         this->texts_table[1]->setPlainText(QString("Poziom trudnosci"));
     }
     else {
-        this->index = 1;
-        qDebug() << "Changed language to english";
+        this->index = 0;
+//        qDebug() << "Changed language to english";
         this->health->setPlainText(QString("Health: ") + QString::number(this->health->get_health()));
         this->score->setPlainText(QString("Score: ") + QString::number(this->score->get_score()));
         this->text->setPlainText(QString("Language"));

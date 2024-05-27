@@ -21,6 +21,7 @@
 
 #include "../inc/Game.h"
 #include "../inc/Enemy.h"
+#include "../inc/qcustomplot.h"
 
 /**
  * @brief Construct a new Game:: Game object. Crates and sets all the game components - scene, player, score, health, enemies, GUI. 
@@ -38,7 +39,7 @@ Game::Game(QWidget *parent) {
     setScene(this->scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    setFixedSize(950, 600);
+//    setFixedSize(950, 600);
     setBackgroundBrush(QColor("#050d33"));
 
     // create the player
@@ -48,11 +49,13 @@ Game::Game(QWidget *parent) {
     QGamepad *gamepad = new QGamepad(3302);
 
     this->player = new Player(gamepad);
-    this->player->setRect(0, 0, 100, 100);
-    this->player->setPos(800/2 - this->player->rect().height()/2, 600 - this->player->rect().height());
+//    this->player->setRect(0, 0, 100, 100);
+    this->player->setPixmap(QPixmap(":/images/player_ship.png"));
+//    this->player->setPos(800/2 - this->player->rect().height()/2, 600 - this->player->rect().height());
+    this->player->setPos(800/2 - 50, 600 - 100);
     this->player->setFlag(QGraphicsItem::ItemIsFocusable);
     this->player->setFocus();
-    this->player->setBrush(Qt::green);
+//    this->player->setBrush(Qt::green);
     this->scene->addItem(this->player);
 
     // create the score
@@ -151,6 +154,40 @@ void Game::drawGUI() {
 
     scene->addItem(controller_text);
 
+
+    // plot
+    QCustomPlot *axises_plot = new QCustomPlot();
+    axises_plot->setGeometry(10, 10, 130, 180);
+
+    QVector<double> x(101), y(101), y1(101);
+    for (int i = 0; i < 101; ++i) {
+        x[i] = i/50.0 - 1;
+        y[i] = x[i] * x[i];
+        y1[i] = x[i];
+    }
+
+    axises_plot->addGraph();
+    axises_plot->graph(0)->setData(x, y);
+    axises_plot->graph(0)->setPen(QPen(Qt::blue));
+
+    axises_plot->addGraph();
+    axises_plot->graph(1)->setData(x, y1);
+    axises_plot->graph(1)->setPen(QPen(Qt::red));
+
+//    axises_plot->xAxis->setLabel("time");
+//    axises_plot->yAxis->setLabel("Axis value");
+
+    axises_plot->xAxis->setRange(-1, 1);
+    axises_plot->yAxis->setRange(0, 1);
+
+    axises_plot->replot();
+//    QTimer *dataTimer = new QTimer(this);
+//    QObject::connect(dataTimer, SIGNAL(timeout()), this, SLOT(updateGraph()));
+//    dataTimer->start(100);
+
+    QGraphicsProxyWidget *proxy3 = scene->addWidget(axises_plot);
+    proxy3->setPos(810, 70);
+
     // difficulty combobox and txt
     QStringList list = {"Easy", "Medium", "Hard"};
     this->difficulty = new ComboBoxTxt(list, "Difficulty level", 807, 277, this->health, this->score, this->player, nullptr);
@@ -167,7 +204,7 @@ void Game::drawGUI() {
     txts_table[0] = controller_text;
     txts_table[1] = this->difficulty->text;
 
-    QStringList list1 = {"Polski", "English"};
+    QStringList list1 = {"English", "Polski"};
     this->language = new ComboBoxTxt(list1, "Language", 807, 517, this->health, this->score, this->player, txts_table);
 
     QGraphicsProxyWidget *proxy2 = scene->addWidget(this->language->combo_box);
@@ -200,4 +237,10 @@ void Game::drawGUI() {
 void Game::comboBoxChange(int index, QComboBox &language) {
     QString selected_item = language.itemText(index);
     qDebug() << "Selected item: " << selected_item;
+}
+
+
+void Game::resizeEvent(QResizeEvent *event) {
+    QGraphicsView::resizeEvent(event);
+    fitInView(sceneRect(), Qt::KeepAspectRatio);
 }

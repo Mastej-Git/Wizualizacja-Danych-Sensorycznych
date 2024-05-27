@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>player_ship.png</file>
+    </qresource>
+</RCC>

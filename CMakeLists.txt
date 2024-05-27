@@ -42,6 +42,9 @@ set(PROJECT_SOURCES
         inc/ComboBoxTxt.h
         src/ControllerManager.cpp
         inc/ControllerManager.h
+        src/qcustomplot.cpp
+        inc/qcustomplot.h
+        res.qrc
         mainwindow.ui
 )
 
