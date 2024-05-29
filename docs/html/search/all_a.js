@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['main_47',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['main_2ecpp_48',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['mainwindow_49',['MainWindow',['../classMainWindow.html',1,'MainWindow'],['../classUi_1_1MainWindow.html',1,'Ui::MainWindow']]],
-  ['move_50',['move',['../classBullet.html#a6140db968c42c05e829e142f74f20b16',1,'Bullet::move()'],['../classEnemy.html#a9a398f8d12234f02563b27440aff7891',1,'Enemy::move()'],['../classEnemyCyborg.html#a0618a29371423ee851ab196125c97bad',1,'EnemyCyborg::move()'],['../classEnemySentients.html#aa055ab291a6222fbb7a8d0e55c9b4dba',1,'EnemySentients::move()'],['../classFlamethrower.html#ac8ebd33408e6e159bc054551eec7ccbb',1,'Flamethrower::move()'],['../classLaser.html#a25c78194500edf5d5c00e70d3ba1eb9f',1,'Laser::move()']]]
+  ['laser_47',['Laser',['../classLaser.html',1,'Laser'],['../classLaser.html#a68465e89283dffcc29a37e94693c6f87',1,'Laser::Laser()']]],
+  ['laser_2ecpp_48',['Laser.cpp',['../Laser_8cpp.html',1,'']]],
+  ['laser_2eh_49',['Laser.h',['../Laser_8h.html',1,'']]]
 ];

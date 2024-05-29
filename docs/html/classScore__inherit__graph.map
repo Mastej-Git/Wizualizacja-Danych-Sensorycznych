@@ -1,4 +1,4 @@
 <map id="Score" name="Score">
-<area shape="rect" id="node1" title=" " alt="" coords="45,80,101,107"/>
+<area shape="rect" id="node1" title="Cyan text in upper left corner indicating player score points." alt="" coords="45,80,101,107"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,140,32"/>
 </map>

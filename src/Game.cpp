@@ -1,7 +1,7 @@
 /**
  * @file Game.cpp
  * @author Michal Mastej
- * @brief This is a Game source file. Contains code for all the functions from header file.
+ * @brief Game source file. Contains code for all the functions from header file.
  * @version 0.1
  * @date 2024-04-22
  * 
@@ -156,36 +156,13 @@ void Game::drawGUI() {
 
 
     // plot
-    QCustomPlot *axises_plot = new QCustomPlot();
-    axises_plot->setGeometry(10, 10, 130, 180);
+    this->axises_plot = new AxisPlot(this->player);
 
-    QVector<double> x(101), y(101), y1(101);
-    for (int i = 0; i < 101; ++i) {
-        x[i] = i/50.0 - 1;
-        y[i] = x[i] * x[i];
-        y1[i] = x[i];
-    }
+    QTimer *dataTimer = new QTimer(this);
+    QObject::connect(dataTimer, SIGNAL(timeout()), this->axises_plot, SLOT(updateGraph()));
+    dataTimer->start(100);
 
-    axises_plot->addGraph();
-    axises_plot->graph(0)->setData(x, y);
-    axises_plot->graph(0)->setPen(QPen(Qt::blue));
-
-    axises_plot->addGraph();
-    axises_plot->graph(1)->setData(x, y1);
-    axises_plot->graph(1)->setPen(QPen(Qt::red));
-
-//    axises_plot->xAxis->setLabel("time");
-//    axises_plot->yAxis->setLabel("Axis value");
-
-    axises_plot->xAxis->setRange(-1, 1);
-    axises_plot->yAxis->setRange(0, 1);
-
-    axises_plot->replot();
-//    QTimer *dataTimer = new QTimer(this);
-//    QObject::connect(dataTimer, SIGNAL(timeout()), this, SLOT(updateGraph()));
-//    dataTimer->start(100);
-
-    QGraphicsProxyWidget *proxy3 = scene->addWidget(axises_plot);
+    QGraphicsProxyWidget *proxy3 = scene->addWidget(this->axises_plot->plot);
     proxy3->setPos(810, 70);
 
     // difficulty combobox and txt

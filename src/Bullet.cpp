@@ -1,7 +1,7 @@
 /**
  * @file Bullet.cpp
  * @author Michal Mastej
- * @brief Source file for Bullet funtions.
+ * @brief Source file for Bullet funtions. Contains constructor and move function.
  * @version 0.1
  * @date 2024-04-22
  * 

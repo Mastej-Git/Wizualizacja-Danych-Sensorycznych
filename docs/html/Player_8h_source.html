@@ -75,54 +75,58 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define MYRECT_H</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;QGraphicsRectItem&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QtGamepad/QGamepad&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classPlayer.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPlayer.html">Player</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> QGraphicsRectItem  {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    QGamepad *gamepad;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">bool</span> keyLeftPressed;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> keyRightPressed;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> keyUpPressed;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span> keyDownPressed;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> keySpacebarPressed;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> keyFlamePressed;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">bool</span> keyLaserPressed;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="classPlayer.html#a7256f06463cd0f3f84baca8307aa0086">Player</a>(QGamepad *gamepad);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a4d269c4118c29b0ee85c1e0f674260ee">keyPressEvent</a>(QKeyEvent *event);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a09f3d5dea93b5699138eba6f4f420b27">keyReleaseEvent</a>(QKeyEvent *event);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> gamepadPressEvent();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;QGraphicsPixmapItem&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;QtGamepad/QGamepad&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classPlayer.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPlayer.html">Player</a> : <span class="keyword">public</span> QObject, <span class="keyword">public</span> QGraphicsPixmapItem  {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    QGamepad *gamepad;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">bool</span> keyLeftPressed;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> keyRightPressed;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">bool</span> keyUpPressed;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">bool</span> keyDownPressed;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> keySpacebarPressed;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">bool</span> keyFlamePressed;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> keyLaserPressed;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a59ae3f2c7151032a85e58b1591cad769">spawn</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#ad48f687798a2245155d637b9fac6cda2">updatePlayerPosition</a> ();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#aabfc5a8cfd7fb8bbbc7a901d163da9d8">updatePlayerBullets</a> ();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">double</span> xAxisValue;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">double</span> yAxisValue;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classPlayer.html#a7256f06463cd0f3f84baca8307aa0086">Player</a>(QGamepad *gamepad);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a82a1bd000dacf0c0cd4c389747ba661f">handleButtonLeftChange</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a5ebd13c8d0a8093b6f7580e454a9177f">handleButtonRightChange</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#acc72d1a19d8bec9abc1814dc99c42cb6">handleButtonUpChange</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a3810beeebacf4d530a75f64d3da3d6f0">handleButtonDownChange</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a2bf41ea319e337de5b7e3114d7a10c41">handleButtonXChange</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a5d17b530ced8817c063c494e6a73b60e">handleButtonSqChange</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a98f3c4a95c8bf772358557071f82aa16">handleButtonTrChange</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a4d269c4118c29b0ee85c1e0f674260ee">keyPressEvent</a>(QKeyEvent *event);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a09f3d5dea93b5699138eba6f4f420b27">keyReleaseEvent</a>(QKeyEvent *event);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> gamepadPressEvent();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a59ae3f2c7151032a85e58b1591cad769">spawn</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#ad48f687798a2245155d637b9fac6cda2">updatePlayerPosition</a> ();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#aabfc5a8cfd7fb8bbbc7a901d163da9d8">updatePlayerBullets</a> ();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#acc8673f1114b6aaf800535896378d536">handleXAxisLeftThumbstick</a>(<span class="keywordtype">double</span> value);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a3dda7a8ea82a23d3efdcdb5d93dbac46">handleYAxisLeftThumbstick</a>(<span class="keywordtype">double</span> value);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MYRECT_H</span></div>
-<div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdef"><b>Definition:</b> Player.h:19</div></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a82a1bd000dacf0c0cd4c389747ba661f">handleButtonLeftChange</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a5ebd13c8d0a8093b6f7580e454a9177f">handleButtonRightChange</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#acc72d1a19d8bec9abc1814dc99c42cb6">handleButtonUpChange</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a3810beeebacf4d530a75f64d3da3d6f0">handleButtonDownChange</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a2bf41ea319e337de5b7e3114d7a10c41">handleButtonXChange</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a5d17b530ced8817c063c494e6a73b60e">handleButtonSqChange</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a98f3c4a95c8bf772358557071f82aa16">handleButtonTrChange</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#acc8673f1114b6aaf800535896378d536">handleXAxisLeftThumbstick</a>(<span class="keywordtype">double</span> value);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a3dda7a8ea82a23d3efdcdb5d93dbac46">handleYAxisLeftThumbstick</a>(<span class="keywordtype">double</span> value);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// MYRECT_H</span></div>
+<div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdoc">Main Player class to controll player and handle all events connectes to his movement.</div><div class="ttdef"><b>Definition:</b> Player.h:25</div></div>
 <div class="ttc" id="aclassPlayer_html_a09f3d5dea93b5699138eba6f4f420b27"><div class="ttname"><a href="classPlayer.html#a09f3d5dea93b5699138eba6f4f420b27">Player::keyReleaseEvent</a></div><div class="ttdeci">void keyReleaseEvent(QKeyEvent *event)</div><div class="ttdoc">Listens and sets the key flags to false on release.</div><div class="ttdef"><b>Definition:</b> Player.cpp:85</div></div>
 <div class="ttc" id="aclassPlayer_html_a2bf41ea319e337de5b7e3114d7a10c41"><div class="ttname"><a href="classPlayer.html#a2bf41ea319e337de5b7e3114d7a10c41">Player::handleButtonXChange</a></div><div class="ttdeci">void handleButtonXChange()</div><div class="ttdoc">Player::handleButtonXChange Signal to change the fire Bullet controll state (true/false)</div><div class="ttdef"><b>Definition:</b> Player.cpp:255</div></div>
 <div class="ttc" id="aclassPlayer_html_a3810beeebacf4d530a75f64d3da3d6f0"><div class="ttname"><a href="classPlayer.html#a3810beeebacf4d530a75f64d3da3d6f0">Player::handleButtonDownChange</a></div><div class="ttdeci">void handleButtonDownChange()</div><div class="ttdoc">Player::handleButtonDownChange Signal to change the Down controll state (true/false)</div><div class="ttdef"><b>Definition:</b> Player.cpp:247</div></div>
-<div class="ttc" id="aclassPlayer_html_a3dda7a8ea82a23d3efdcdb5d93dbac46"><div class="ttname"><a href="classPlayer.html#a3dda7a8ea82a23d3efdcdb5d93dbac46">Player::handleYAxisLeftThumbstick</a></div><div class="ttdeci">void handleYAxisLeftThumbstick(double value)</div><div class="ttdoc">Player::handleYAxisLeftThumbstick Signal to read the X axis thumbstick value.</div><div class="ttdef"><b>Definition:</b> Player.cpp:298</div></div>
+<div class="ttc" id="aclassPlayer_html_a3dda7a8ea82a23d3efdcdb5d93dbac46"><div class="ttname"><a href="classPlayer.html#a3dda7a8ea82a23d3efdcdb5d93dbac46">Player::handleYAxisLeftThumbstick</a></div><div class="ttdeci">void handleYAxisLeftThumbstick(double value)</div><div class="ttdoc">Player::handleYAxisLeftThumbstick Signal to read the X axis thumbstick value.</div><div class="ttdef"><b>Definition:</b> Player.cpp:300</div></div>
 <div class="ttc" id="aclassPlayer_html_a4d269c4118c29b0ee85c1e0f674260ee"><div class="ttname"><a href="classPlayer.html#a4d269c4118c29b0ee85c1e0f674260ee">Player::keyPressEvent</a></div><div class="ttdeci">void keyPressEvent(QKeyEvent *event)</div><div class="ttdoc">Listens and sets the key flags to true on press and reads the controller inputs.</div><div class="ttdef"><b>Definition:</b> Player.cpp:49</div></div>
 <div class="ttc" id="aclassPlayer_html_a59ae3f2c7151032a85e58b1591cad769"><div class="ttname"><a href="classPlayer.html#a59ae3f2c7151032a85e58b1591cad769">Player::spawn</a></div><div class="ttdeci">void spawn()</div><div class="ttdoc">Slot position to spawn all the enemy types.</div><div class="ttdef"><b>Definition:</b> Player.cpp:197</div></div>
 <div class="ttc" id="aclassPlayer_html_a5d17b530ced8817c063c494e6a73b60e"><div class="ttname"><a href="classPlayer.html#a5d17b530ced8817c063c494e6a73b60e">Player::handleButtonSqChange</a></div><div class="ttdeci">void handleButtonSqChange()</div><div class="ttdoc">Player::handleButtonSqChange Signal to change the fire Flamethrower controll state (true/false)</div><div class="ttdef"><b>Definition:</b> Player.cpp:263</div></div>

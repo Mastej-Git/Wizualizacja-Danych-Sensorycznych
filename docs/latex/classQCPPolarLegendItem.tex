@@ -1,0 +1,91 @@
+\hypertarget{classQCPPolarLegendItem}{}\doxysection{QCPPolar\+Legend\+Item Class Reference}
+\label{classQCPPolarLegendItem}\index{QCPPolarLegendItem@{QCPPolarLegendItem}}
+
+
+A legend item for polar plots.  
+
+
+
+
+Inheritance diagram for QCPPolar\+Legend\+Item\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classQCPPolarLegendItem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for QCPPolar\+Legend\+Item\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classQCPPolarLegendItem__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQCPPolarLegendItem_a5cb0dd67a4f14cd5a762d516b9a527ec}\label{classQCPPolarLegendItem_a5cb0dd67a4f14cd5a762d516b9a527ec}} 
+{\bfseries QCPPolar\+Legend\+Item} (\mbox{\hyperlink{classQCPLegend}{QCPLegend}} $\ast$parent, \mbox{\hyperlink{classQCPPolarGraph}{QCPPolar\+Graph}} $\ast$graph)
+\item 
+\mbox{\Hypertarget{classQCPPolarLegendItem_a71b17ebc614aa6c9617d26c3440618fa}\label{classQCPPolarLegendItem_a71b17ebc614aa6c9617d26c3440618fa}} 
+\mbox{\hyperlink{classQCPPolarGraph}{QCPPolar\+Graph}} $\ast$ {\bfseries polar\+Graph} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQCPPolarLegendItem_abf9639f11bfc64779f243cca920aadef}\label{classQCPPolarLegendItem_abf9639f11bfc64779f243cca920aadef}} 
+virtual void {\bfseries draw} (\mbox{\hyperlink{classQCPPainter}{QCPPainter}} $\ast$painter) Q\+\_\+\+DECL\+\_\+\+OVERRIDE
+\item 
+virtual QSize \mbox{\hyperlink{classQCPPolarLegendItem_a17e2c0da8308a014b1d4339131215217}{minimum\+Outer\+Size\+Hint}} () const Q\+\_\+\+DECL\+\_\+\+OVERRIDE
+\item 
+\mbox{\Hypertarget{classQCPPolarLegendItem_a2592d8638500edb0105c77dae2bacbf9}\label{classQCPPolarLegendItem_a2592d8638500edb0105c77dae2bacbf9}} 
+QPen {\bfseries get\+Icon\+Border\+Pen} () const
+\item 
+\mbox{\Hypertarget{classQCPPolarLegendItem_ab877841120790623b7ffa75a1b34b027}\label{classQCPPolarLegendItem_ab877841120790623b7ffa75a1b34b027}} 
+QColor {\bfseries get\+Text\+Color} () const
+\item 
+\mbox{\Hypertarget{classQCPPolarLegendItem_a72e7dd33f4b4d220a88faecd90631b55}\label{classQCPPolarLegendItem_a72e7dd33f4b4d220a88faecd90631b55}} 
+QFont {\bfseries get\+Font} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQCPPolarLegendItem_af7a08d8dd23d77894b81da5461d11f88}\label{classQCPPolarLegendItem_af7a08d8dd23d77894b81da5461d11f88}} 
+\mbox{\hyperlink{classQCPPolarGraph}{QCPPolar\+Graph}} $\ast$ {\bfseries m\+Polar\+Graph}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A legend item for polar plots. 
+
+\begin{DoxyWarning}{Warning}
+In this \mbox{\hyperlink{classQCustomPlot}{QCustom\+Plot}} version, polar plots are a tech preview. Expect documentation and functionality to be incomplete, as well as changing public interfaces in the future. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classQCPPolarLegendItem_a17e2c0da8308a014b1d4339131215217}\label{classQCPPolarLegendItem_a17e2c0da8308a014b1d4339131215217}} 
+\index{QCPPolarLegendItem@{QCPPolarLegendItem}!minimumOuterSizeHint@{minimumOuterSizeHint}}
+\index{minimumOuterSizeHint@{minimumOuterSizeHint}!QCPPolarLegendItem@{QCPPolarLegendItem}}
+\doxysubsubsection{\texorpdfstring{minimumOuterSizeHint()}{minimumOuterSizeHint()}}
+{\footnotesize\ttfamily QSize QCPPolar\+Legend\+Item\+::minimum\+Outer\+Size\+Hint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Returns the suggested minimum size this layout element (the \mbox{\hyperlink{classQCPLayoutElement_a2a32a12a6161c9dffbadeb9cc585510c}{outer\+Rect}}) may be compressed to, if no manual minimum size is set.
+
+if a minimum size (\mbox{\hyperlink{classQCPLayoutElement_a5dd29a3c8bc88440c97c06b67be7886b}{set\+Minimum\+Size}}) was not set manually, parent layouts use the returned size (usually indirectly through QCPLayout\+::get\+Final\+Minimum\+Outer\+Size) to determine the minimum allowed size of this layout element.
+
+A manual minimum size is considered set if it is non-\/zero.
+
+The default implementation simply returns the sum of the horizontal margins for the width and the sum of the vertical margins for the height. Reimplementations may use their detailed knowledge about the layout element\textquotesingle{}s content to provide size hints. 
+
+Reimplemented from \mbox{\hyperlink{classQCPLayoutElement_a46789036c4fcb190fa374f91321d7c09}{QCPLayout\+Element}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/feniks/my\+\_\+ws/6sem/\+WDS/\+Space\+Invaders/\+Space\+Invaders/inc/qcustomplot.\+h\item 
+/home/feniks/my\+\_\+ws/6sem/\+WDS/\+Space\+Invaders/\+Space\+Invaders/src/qcustomplot.\+cpp\end{DoxyCompactItemize}

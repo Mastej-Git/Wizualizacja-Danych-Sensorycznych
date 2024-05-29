@@ -1,7 +1,7 @@
 /**
  * @file EnemySentients.cpp
  * @author your name (you@domain.com)
- * @brief This is an EnemySentient source file. Contains code for all the functions from header file.
+ * @brief EnemySentient source file. Contains code for all the functions from header file.
  * @version 0.1
  * @date 2024-04-22
  * 

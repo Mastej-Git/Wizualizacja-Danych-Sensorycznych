@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['enemy_69',['Enemy',['../classEnemy.html',1,'']]],
-  ['enemycyborg_70',['EnemyCyborg',['../classEnemyCyborg.html',1,'']]],
-  ['enemysentients_71',['EnemySentients',['../classEnemySentients.html',1,'']]]
+  ['comboboxtxt_66',['ComboBoxTxt',['../classComboBoxTxt.html',1,'']]],
+  ['controllermanager_67',['ControllerManager',['../classControllerManager.html',1,'']]]
 ];

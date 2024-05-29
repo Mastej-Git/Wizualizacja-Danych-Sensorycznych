@@ -17,6 +17,11 @@
 #include <QObject>
 #include <QtGamepad/QGamepad>
 
+/**
+ * @brief Main Player class to controll player and handle all events connectes to his movement.
+ * 
+ */
+
 class Player : public QObject, public QGraphicsPixmapItem  {
     Q_OBJECT
 public:
@@ -30,6 +35,9 @@ public:
     bool keySpacebarPressed;
     bool keyFlamePressed;
     bool keyLaserPressed;
+
+    double xAxisValue;
+    double yAxisValue;
 
     Player(QGamepad *gamepad);
 

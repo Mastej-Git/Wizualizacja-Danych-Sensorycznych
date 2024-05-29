@@ -15,6 +15,11 @@
 #include <QGraphicsRectItem>
 #include <QObject>
 
+/**
+ * @brief Third weapon type that Player can use to eliminate enemies. Works against EnemySentients.
+ * 
+ */
+
 class Laser : public QObject, public QGraphicsRectItem {
     Q_OBJECT
 public:

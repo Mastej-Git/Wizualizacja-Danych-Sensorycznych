@@ -15,6 +15,11 @@
 #include <QGraphicsRectItem>
 #include <QObject>
 
+/**
+ * @brief Basic projectile type to shot enemies. Works against EnemyCyborg
+ * 
+ */
+
 class Bullet : public QObject, public QGraphicsRectItem{
     Q_OBJECT
 public:

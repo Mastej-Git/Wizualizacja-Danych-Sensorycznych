@@ -15,6 +15,11 @@
 #include <QGraphicsRectItem>
 #include <QObject>
 
+/**
+ * @brief Basic enemy type that player has to eliminate. Is weak to Flamethrower weapon.
+ * 
+ */
+
 class Enemy : public QObject, public QGraphicsRectItem {
     Q_OBJECT
 public:

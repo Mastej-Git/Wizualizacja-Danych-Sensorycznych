@@ -44,6 +44,8 @@ set(PROJECT_SOURCES
         inc/ControllerManager.h
         src/qcustomplot.cpp
         inc/qcustomplot.h
+        src/AxisPlot.cpp
+        inc/AxisPlot.h
         res.qrc
         mainwindow.ui
 )

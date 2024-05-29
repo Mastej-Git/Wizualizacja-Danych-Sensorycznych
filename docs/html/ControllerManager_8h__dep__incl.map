@@ -1,0 +1,12 @@
+<map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/ControllerManager.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/ControllerManager.h">
+<area shape="rect" id="node1" title="ControllerManager header file. Circular indicator showing controller connection." alt="" coords="865,5,1119,61"/>
+<area shape="rect" id="node2" href="$Game_8h.html" title="Game header file. Game is main class in which game tooks place." alt="" coords="899,109,1085,165"/>
+<area shape="rect" id="node3" href="$Bullet_8cpp.html" title="Source file for Bullet funtions. Contains constructor and move function." alt="" coords="5,213,203,269"/>
+<area shape="rect" id="node4" href="$Enemy_8cpp.html" title="Enemy source file. Contains constructor and move function." alt="" coords="227,213,429,269"/>
+<area shape="rect" id="node5" href="$EnemyCyborg_8cpp.html" title="EnemyCyborg source file. Contains code for all the functions from header file." alt="" coords="454,213,701,269"/>
+<area shape="rect" id="node6" href="$EnemySentients_8cpp.html" title="EnemySentient source file. Contains code for all the functions from header file." alt="" coords="725,213,985,269"/>
+<area shape="rect" id="node7" href="$Flamethrower_8cpp.html" title="Flamethrower weapon source file. Contains code for all the functions from header file." alt="" coords="1009,213,1252,269"/>
+<area shape="rect" id="node8" href="$Game_8cpp.html" title="Game source file. Contains code for all the functions from header file." alt="" coords="1277,213,1475,269"/>
+<area shape="rect" id="node9" href="$Laser_8cpp.html" title="Laser weapon source file. Contains code for all the functions from header file." alt="" coords="1500,213,1695,269"/>
+<area shape="rect" id="node10" href="$main_8cpp.html" title="Main running Game class." alt="" coords="1719,213,1911,269"/>
+</map>

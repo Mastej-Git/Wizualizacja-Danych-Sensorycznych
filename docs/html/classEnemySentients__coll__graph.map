@@ -1,5 +1,5 @@
 <map id="EnemySentients" name="EnemySentients">
-<area shape="rect" id="node1" title=" " alt="" coords="45,80,164,107"/>
+<area shape="rect" id="node1" title="Third enemy type that Player has to eliminate. Is weak to Laser weapon." alt="" coords="45,80,164,107"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,76,32"/>
 <area shape="rect" id="node3" title=" " alt="" coords="101,5,239,32"/>
 </map>

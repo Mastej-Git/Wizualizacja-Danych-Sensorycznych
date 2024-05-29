@@ -15,6 +15,11 @@
 #include <QGraphicsRectItem>
 #include <QObject>
 
+/**
+ * @brief Second weapon type that Player can use to eliminate enemies. Works on Enemy.
+ * 
+ */
+
 class Flamethrower : public QObject, public QGraphicsRectItem {
     Q_OBJECT
 public:

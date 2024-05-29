@@ -1,7 +1,7 @@
 /**
  * @file ComboBoxTxt.cpp
  * @author Michal Mastej
- * @brief ComboBoxTxt source file.
+ * @brief ComboBoxTxt source file. Contains contructor, change_item and change_language slots
  * @version 0.1
  * @date 2024-04-22
  * 

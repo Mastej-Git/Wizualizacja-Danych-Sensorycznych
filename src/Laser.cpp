@@ -1,7 +1,7 @@
 /**
  * @file Laser.cpp
  * @author Michal Mastej
- * @brief This is a Laser weapon source file. Contains code for all the functions from header file.
+ * @brief Laser weapon source file. Contains code for all the functions from header file.
  * @version 0.1
  * @date 2024-04-22
  * 

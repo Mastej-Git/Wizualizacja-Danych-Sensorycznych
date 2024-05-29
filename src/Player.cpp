@@ -1,7 +1,7 @@
 /**
  * @file Player.cpp
  * @author Michal Mastej
- * @brief This is a Player source file. Contains code for all the functions from header file.
+ * @brief Player source file. Contains code for all the functions from header file.
  * @version 0.1
  * @date 2024-04-22
  * 
@@ -278,6 +278,8 @@ void Player::handleButtonTrChange() {
  */
 
 void Player::handleXAxisLeftThumbstick(double value) {
+    this->xAxisValue = value;
+
     if (value > 0.5) {
        this->keyRightPressed = true;
     }
@@ -296,6 +298,8 @@ void Player::handleXAxisLeftThumbstick(double value) {
  */
 
 void Player::handleYAxisLeftThumbstick(double value) {
+    this->yAxisValue = value;
+
     if (value > 0.5) {
        this->keyDownPressed = true;
     }

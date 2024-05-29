@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
  * @author Michal Mastej
- * @brief This is a main file.
+ * @brief Main running Game class.
  * @version 0.1
  * @date 2024-04-22
  * 

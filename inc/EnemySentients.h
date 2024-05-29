@@ -15,6 +15,11 @@
 #include <QGraphicsRectItem>
 #include <QObject>
 
+/**
+ * @brief Third enemy type that Player has to eliminate. Is weak to Laser weapon.
+ * 
+ */
+
 class EnemySentients : public QObject, public QGraphicsRectItem {
     Q_OBJECT
 public:

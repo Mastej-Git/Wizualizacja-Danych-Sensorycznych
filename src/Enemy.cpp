@@ -1,7 +1,7 @@
 /**
  * @file Enemy.cpp
  * @author Michal Mastej
- * @brief Enemy source file.
+ * @brief Enemy source file. Contains constructor and move function.
  * @version 0.1
  * @date 2024-04-22
  * 

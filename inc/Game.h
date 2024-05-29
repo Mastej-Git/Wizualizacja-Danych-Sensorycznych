@@ -24,6 +24,12 @@
 #include "Health.h"
 #include "ComboBoxTxt.h"
 #include "ControllerManager.h"
+#include "AxisPlot.h"
+
+/**
+ * @brief Main game class to controll events in the game.
+ * 
+ */
 
 class Game : public QGraphicsView {
 public:
@@ -33,6 +39,7 @@ public:
     Health *health;
     ComboBoxTxt *difficulty, *language;
     ControllerManager *manager;
+    AxisPlot *axises_plot;
 
     Game(QWidget *parent = 0);
 

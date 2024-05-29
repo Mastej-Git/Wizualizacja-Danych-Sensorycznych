@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['laser_44',['Laser',['../classLaser.html',1,'Laser'],['../classLaser.html#a68465e89283dffcc29a37e94693c6f87',1,'Laser::Laser()']]],
-  ['laser_2ecpp_45',['Laser.cpp',['../Laser_8cpp.html',1,'']]],
-  ['laser_2eh_46',['Laser.h',['../Laser_8h.html',1,'']]]
+  ['keypressevent_45',['keyPressEvent',['../classPlayer.html#a4d269c4118c29b0ee85c1e0f674260ee',1,'Player']]],
+  ['keyreleaseevent_46',['keyReleaseEvent',['../classPlayer.html#a09f3d5dea93b5699138eba6f4f420b27',1,'Player']]]
 ];

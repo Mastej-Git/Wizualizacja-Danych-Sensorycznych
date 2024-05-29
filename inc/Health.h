@@ -15,6 +15,11 @@
 #include <QGraphicsRectItem>
 #include <QObject>
 
+/**
+ * @brief Red text in upper left corner indicating player health points.
+ * 
+ */
+
 class Health: public QGraphicsTextItem {
 private:
     int health;

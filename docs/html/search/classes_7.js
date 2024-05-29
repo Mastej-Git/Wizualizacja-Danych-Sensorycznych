@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainwindow_76',['MainWindow',['../classMainWindow.html',1,'MainWindow'],['../classUi_1_1MainWindow.html',1,'Ui::MainWindow']]]
+  ['laser_74',['Laser',['../classLaser.html',1,'']]]
 ];

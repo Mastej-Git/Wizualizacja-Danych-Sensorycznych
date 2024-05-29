@@ -1,12 +1,14 @@
 <map id="Game" name="Game">
-<area shape="rect" id="node1" title=" " alt="" coords="300,287,357,313"/>
+<area shape="rect" id="node1" title="Main game class to controll events in the game." alt="" coords="344,287,401,313"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,183,119,209"/>
-<area shape="rect" id="node3" href="$classControllerManager.html" title=" " alt="" coords="113,132,241,159"/>
-<area shape="rect" id="node4" title=" " alt="" coords="265,5,336,32"/>
-<area shape="rect" id="node7" href="$classComboBoxTxt.html" title=" " alt="" coords="334,183,441,209"/>
-<area shape="rect" id="node8" href="$classPlayer.html" title=" " alt="" coords="263,81,322,108"/>
-<area shape="rect" id="node5" href="$classHealth.html" title=" " alt="" coords="421,81,481,108"/>
-<area shape="rect" id="node6" title=" " alt="" coords="425,5,560,32"/>
-<area shape="rect" id="node10" href="$classScore.html" title=" " alt="" coords="506,81,562,108"/>
-<area shape="rect" id="node9" title=" " alt="" coords="102,5,241,32"/>
+<area shape="rect" id="node3" href="$classControllerManager.html" title="Circular indicator of controller conection in upper right corner." alt="" coords="65,132,193,159"/>
+<area shape="rect" id="node4" title=" " alt="" coords="257,5,328,32"/>
+<area shape="rect" id="node7" href="$classAxisPlot.html" title="Uses qcustomplot to reprezent thumbstick axis info on a graph." alt="" coords="247,183,317,209"/>
+<area shape="rect" id="node9" href="$classPlayer.html" title="Main Player class to controll player and handle all events connectes to his movement." alt="" coords="375,81,434,108"/>
+<area shape="rect" id="node11" href="$classComboBoxTxt.html" title="ComboBox with Text. Used to change language and game difficulty." alt="" coords="437,183,543,209"/>
+<area shape="rect" id="node5" href="$classHealth.html" title="Red text in upper left corner indicating player health points." alt="" coords="649,81,709,108"/>
+<area shape="rect" id="node6" title=" " alt="" coords="612,5,747,32"/>
+<area shape="rect" id="node12" href="$classScore.html" title="Cyan text in upper left corner indicating player score points." alt="" coords="563,81,619,108"/>
+<area shape="rect" id="node8" href="$classQCustomPlot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ..." alt="" coords="250,81,351,108"/>
+<area shape="rect" id="node10" title=" " alt="" coords="433,5,587,32"/>
 </map>

@@ -19,6 +19,11 @@
 #include "Score.h"
 #include "Player.h"
 
+/**
+ * @brief ComboBox with Text. Used to change language and game difficulty.
+ * 
+ */
+
 class ComboBoxTxt : public QObject {
     Q_OBJECT
 public:

@@ -15,6 +15,11 @@
 #include <QGraphicsRectItem>
 #include <QObject>
 
+/**
+ * @brief Second enemy type that Player has to eliminate. Is weak to Bullet projectile.
+ * 
+ */
+
 class EnemyCyborg : public QObject, public QGraphicsRectItem {
     Q_OBJECT
 public:

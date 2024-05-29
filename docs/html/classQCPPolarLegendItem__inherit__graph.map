@@ -1,0 +1,7 @@
+<map id="QCPPolarLegendItem" name="QCPPolarLegendItem">
+<area shape="rect" id="node1" title="A legend item for polar plots." alt="" coords="14,304,163,331"/>
+<area shape="rect" id="node2" href="$classQCPAbstractLegendItem.html" title="The abstract base class for all entries in a QCPLegend." alt="" coords="5,229,172,256"/>
+<area shape="rect" id="node3" href="$classQCPLayoutElement.html" title="The abstract base class for all objects that form the layout system." alt="" coords="19,155,158,181"/>
+<area shape="rect" id="node4" href="$classQCPLayerable.html" title="Base class for all drawable objects." alt="" coords="35,80,142,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="53,5,124,32"/>
+</map>

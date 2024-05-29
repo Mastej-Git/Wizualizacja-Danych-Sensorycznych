@@ -1,4 +1,4 @@
 <map id="Game" name="Game">
-<area shape="rect" id="node1" title=" " alt="" coords="33,80,91,107"/>
+<area shape="rect" id="node1" title="Main game class to controll events in the game." alt="" coords="33,80,91,107"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,119,32"/>
 </map>

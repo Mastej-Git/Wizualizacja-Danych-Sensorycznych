@@ -1,5 +1,5 @@
 <map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/Bullet.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/Bullet.h">
 <area shape="rect" id="node1" title="Bullet header file. Basic weapon that user can shoot to eliminate enemies. Works on EnemyCyborg type." alt="" coords="122,5,307,61"/>
-<area shape="rect" id="node2" href="$Bullet_8cpp.html" title="Source file for Bullet funtions." alt="" coords="5,109,203,165"/>
-<area shape="rect" id="node3" href="$Player_8cpp.html" title="This is a Player source file. Contains code for all the functions from header file." alt="" coords="227,109,427,165"/>
+<area shape="rect" id="node2" href="$Bullet_8cpp.html" title="Source file for Bullet funtions. Contains constructor and move function." alt="" coords="5,109,203,165"/>
+<area shape="rect" id="node3" href="$Player_8cpp.html" title="Player source file. Contains code for all the functions from header file." alt="" coords="227,109,427,165"/>
 </map>

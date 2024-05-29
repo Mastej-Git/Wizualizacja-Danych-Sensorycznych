@@ -1,6 +1,6 @@
 <map id="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/EnemySentients.h" name="/home/feniks/my_ws/6sem/WDS/SpaceInvaders/SpaceInvaders/inc/EnemySentients.h">
 <area shape="rect" id="node1" title="EnemySentients header file. Third type of enemy that spawns randomly in the game. Is weak to Laser." alt="" coords="265,5,510,61"/>
-<area shape="rect" id="node2" href="$EnemySentients_8cpp.html" title="This is an EnemySentient source file. Contains code for all the functions from header file." alt="" coords="5,109,265,165"/>
-<area shape="rect" id="node3" href="$Laser_8cpp.html" title="This is a Laser weapon source file. Contains code for all the functions from header file." alt="" coords="290,109,485,165"/>
-<area shape="rect" id="node4" href="$Player_8cpp.html" title="This is a Player source file. Contains code for all the functions from header file." alt="" coords="509,109,709,165"/>
+<area shape="rect" id="node2" href="$EnemySentients_8cpp.html" title="EnemySentient source file. Contains code for all the functions from header file." alt="" coords="5,109,265,165"/>
+<area shape="rect" id="node3" href="$Laser_8cpp.html" title="Laser weapon source file. Contains code for all the functions from header file." alt="" coords="290,109,485,165"/>
+<area shape="rect" id="node4" href="$Player_8cpp.html" title="Player source file. Contains code for all the functions from header file." alt="" coords="509,109,709,165"/>
 </map>

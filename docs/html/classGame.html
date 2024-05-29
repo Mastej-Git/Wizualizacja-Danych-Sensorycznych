@@ -63,6 +63,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classGame-members.html">List of all members</a>  </div>
@@ -70,12 +71,17 @@ $(function() {
 <div class="title">Game Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Main game class to controll events in the game.  
+ <a href="classGame.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="Game_8h_source.html">Game.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Game:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGame__inherit__graph.png" border="0" usemap="#aGame_inherit__map" alt="Inheritance graph"/></div>
 <map name="aGame_inherit__map" id="aGame_inherit__map">
-<area shape="rect" title=" " alt="" coords="33,80,91,107"/>
+<area shape="rect" title="Main game class to controll events in the game." alt="" coords="33,80,91,107"/>
 <area shape="rect" title=" " alt="" coords="5,5,119,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -84,30 +90,38 @@ Collaboration diagram for Game:</div>
 <div class="dyncontent">
 <div class="center"><img src="classGame__coll__graph.png" border="0" usemap="#aGame_coll__map" alt="Collaboration graph"/></div>
 <map name="aGame_coll__map" id="aGame_coll__map">
-<area shape="rect" title=" " alt="" coords="300,287,357,313"/>
+<area shape="rect" title="Main game class to controll events in the game." alt="" coords="344,287,401,313"/>
 <area shape="rect" title=" " alt="" coords="5,183,119,209"/>
-<area shape="rect" href="classControllerManager.html" title=" " alt="" coords="113,132,241,159"/>
-<area shape="rect" title=" " alt="" coords="265,5,336,32"/>
-<area shape="rect" href="classComboBoxTxt.html" title=" " alt="" coords="334,183,441,209"/>
-<area shape="rect" href="classPlayer.html" title=" " alt="" coords="263,81,322,108"/>
-<area shape="rect" href="classHealth.html" title=" " alt="" coords="421,81,481,108"/>
-<area shape="rect" title=" " alt="" coords="425,5,560,32"/>
-<area shape="rect" href="classScore.html" title=" " alt="" coords="506,81,562,108"/>
-<area shape="rect" title=" " alt="" coords="102,5,241,32"/>
+<area shape="rect" href="classControllerManager.html" title="Circular indicator of controller conection in upper right corner." alt="" coords="65,132,193,159"/>
+<area shape="rect" title=" " alt="" coords="257,5,328,32"/>
+<area shape="rect" href="classAxisPlot.html" title="Uses qcustomplot to reprezent thumbstick axis info on a graph." alt="" coords="247,183,317,209"/>
+<area shape="rect" href="classPlayer.html" title="Main Player class to controll player and handle all events connectes to his movement." alt="" coords="375,81,434,108"/>
+<area shape="rect" href="classComboBoxTxt.html" title="ComboBox with Text. Used to change language and game difficulty." alt="" coords="437,183,543,209"/>
+<area shape="rect" href="classHealth.html" title="Red text in upper left corner indicating player health points." alt="" coords="649,81,709,108"/>
+<area shape="rect" title=" " alt="" coords="612,5,747,32"/>
+<area shape="rect" href="classScore.html" title="Cyan text in upper left corner indicating player score points." alt="" coords="563,81,619,108"/>
+<area shape="rect" href="classQCustomPlot.html" title="The central class of the library. This is the QWidget which displays the plot and interacts with the ..." alt="" coords="250,81,351,108"/>
+<area shape="rect" title=" " alt="" coords="433,5,587,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a786270db041794c82bd32be55a416688"><td class="memItemLeft" align="right" valign="top"><a id="a786270db041794c82bd32be55a416688"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateGraph</b> ()</td></tr>
+<tr class="separator:a786270db041794c82bd32be55a416688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae3c64a8dd73de0a99849db8ec0e9a86c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ae3c64a8dd73de0a99849db8ec0e9a86c">Game</a> (QWidget *parent=0)</td></tr>
-<tr class="memdesc:ae3c64a8dd73de0a99849db8ec0e9a86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classGame.html">Game</a>:: <a class="el" href="classGame.html">Game</a> object. Crates and sets all the game components - scene, player, score, health, enemies, GUI. Also creates signals for enemy spawning, updating player position, updating player projectiles.  <a href="classGame.html#ae3c64a8dd73de0a99849db8ec0e9a86c">More...</a><br /></td></tr>
+<tr class="memdesc:ae3c64a8dd73de0a99849db8ec0e9a86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classGame.html" title="Main game class to controll events in the game.">Game</a>:: <a class="el" href="classGame.html" title="Main game class to controll events in the game.">Game</a> object. Crates and sets all the game components - scene, player, score, health, enemies, GUI. Also creates signals for enemy spawning, updating player position, updating player projectiles.  <a href="classGame.html#ae3c64a8dd73de0a99849db8ec0e9a86c">More...</a><br /></td></tr>
 <tr class="separator:ae3c64a8dd73de0a99849db8ec0e9a86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a759ede70d6e7cb6db78eceb5c4603d9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#a759ede70d6e7cb6db78eceb5c4603d9c">drawPanel</a> (int x, int y, int width, int height, QColor color, double opacity)</td></tr>
 <tr class="memdesc:a759ede70d6e7cb6db78eceb5c4603d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates GUI background panel wothout any widgets.  <a href="classGame.html#a759ede70d6e7cb6db78eceb5c4603d9c">More...</a><br /></td></tr>
 <tr class="separator:a759ede70d6e7cb6db78eceb5c4603d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae730058e66f3ed1290b20e78b531f004"><td class="memItemLeft" align="right" valign="top"><a id="ae730058e66f3ed1290b20e78b531f004"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGame.html#ae730058e66f3ed1290b20e78b531f004">drawGUI</a> ()</td></tr>
-<tr class="memdesc:ae730058e66f3ed1290b20e78b531f004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws all the GUI widgets - controller indicator circle, difficulty <a class="el" href="classComboBoxTxt.html">ComboBoxTxt</a>, language <a class="el" href="classComboBoxTxt.html">ComboBoxTxt</a>, and all the texts. <br /></td></tr>
+<tr class="memdesc:ae730058e66f3ed1290b20e78b531f004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws all the GUI widgets - controller indicator circle, difficulty <a class="el" href="classComboBoxTxt.html" title="ComboBox with Text. Used to change language and game difficulty.">ComboBoxTxt</a>, language <a class="el" href="classComboBoxTxt.html" title="ComboBox with Text. Used to change language and game difficulty.">ComboBoxTxt</a>, and all the texts. <br /></td></tr>
 <tr class="separator:ae730058e66f3ed1290b20e78b531f004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60d93d3b7af946d169a53032d901316d"><td class="memItemLeft" align="right" valign="top"><a id="a60d93d3b7af946d169a53032d901316d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>comboBoxChange</b> (int index, QComboBox &amp;language)</td></tr>
@@ -139,8 +153,13 @@ QGraphicsScene *&#160;</td><td class="memItemRight" valign="bottom"><b>scene</b>
 <tr class="memitem:aa35af834973e67352c46669757869a32"><td class="memItemLeft" align="right" valign="top"><a id="aa35af834973e67352c46669757869a32"></a>
 <a class="el" href="classControllerManager.html">ControllerManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>manager</b></td></tr>
 <tr class="separator:aa35af834973e67352c46669757869a32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21883094138ac3de6c3f2c3523937235"><td class="memItemLeft" align="right" valign="top"><a id="a21883094138ac3de6c3f2c3523937235"></a>
+<a class="el" href="classAxisPlot.html">AxisPlot</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>axises_plot</b></td></tr>
+<tr class="separator:a21883094138ac3de6c3f2c3523937235"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Main game class to controll events in the game. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae3c64a8dd73de0a99849db8ec0e9a86c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3c64a8dd73de0a99849db8ec0e9a86c">&#9670;&nbsp;</a></span>Game()</h2>
 
@@ -157,7 +176,7 @@ QGraphicsScene *&#160;</td><td class="memItemRight" valign="bottom"><b>scene</b>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="classGame.html">Game</a>:: <a class="el" href="classGame.html">Game</a> object. Crates and sets all the game components - scene, player, score, health, enemies, GUI. Also creates signals for enemy spawning, updating player position, updating player projectiles. </p>
+<p>Construct a new <a class="el" href="classGame.html" title="Main game class to controll events in the game.">Game</a>:: <a class="el" href="classGame.html" title="Main game class to controll events in the game.">Game</a> object. Crates and sets all the game components - scene, player, score, health, enemies, GUI. Also creates signals for enemy spawning, updating player position, updating player projectiles. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">parent</td><td></td></tr>
