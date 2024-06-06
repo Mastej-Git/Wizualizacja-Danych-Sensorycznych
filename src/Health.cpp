@@ -35,8 +35,12 @@ Health::Health(QGraphicsItem *parent): QGraphicsTextItem(parent) {
  */
 void Health::decrease() {
     this->health--;
-    if (*(this->language_ptr) == 1) setPlainText(QString("Health: ") + QString::number(this->health));
-    else setPlainText(QString("Zdrowie: ") + QString::number(this->health));
+    if (*(this->language_ptr) == 0) {
+        setPlainText(QString("Health: ") + QString::number(this->health));
+    }
+    else {
+        setPlainText(QString("Zdrowie: ") + QString::number(this->health));
+    }
 }
 
 /**

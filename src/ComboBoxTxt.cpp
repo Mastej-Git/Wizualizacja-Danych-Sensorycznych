@@ -19,7 +19,7 @@
  * @param text Text Displayed above ComboBox
  * @param x ComboBox x position
  * @param y ComboBox y position
- * @param health Health pointer to change the health points
+ * @param[in, out] health Health pointer to change the health points
  * @param player Player pointer to return focus on the player character
  */
 ComboBoxTxt::ComboBoxTxt(QStringList list, QString text, int x, int y, Health *health, Score *score, Player *player, QGraphicsTextItem **texts_table) {
