@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/images">
         <file>player_ship.png</file>
+        <file>flame.png</file>
     </qresource>
+    <qresource prefix="/language"/>
 </RCC>
