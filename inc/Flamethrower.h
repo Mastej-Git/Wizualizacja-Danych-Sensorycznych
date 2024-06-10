@@ -12,7 +12,6 @@
 #ifndef FLAMETHROWER_H
 #define FLAMETHROWER_H
 
-#include <QGraphicsRectItem>
 #include <QObject>
 #include <QGraphicsPixmapItem>
 

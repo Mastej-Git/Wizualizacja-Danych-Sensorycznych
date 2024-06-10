@@ -187,12 +187,12 @@ void Player::spawn() {
     }
     else if (rand_numb == 2) {
         EnemyCyborg *cyborg_enemy = new EnemyCyborg();
-        cyborg_enemy->setBrush(Qt::lightGray);
+//        cyborg_enemy->setBrush(Qt::lightGray);
         scene()->addItem(cyborg_enemy);
     }
     else if (rand_numb == 3) {
         EnemySentients *sentient_enemy = new EnemySentients();
-        sentient_enemy->setBrush(Qt::darkRed);
+//        sentient_enemy->setBrush(Qt::darkRed);
         scene()->addItem(sentient_enemy);
     }
 

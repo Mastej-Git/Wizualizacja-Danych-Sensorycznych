@@ -2,6 +2,8 @@
     <qresource prefix="/images">
         <file>player_ship.png</file>
         <file>flame.png</file>
+        <file>enemy_sentient.png</file>
+        <file>enemy_cyborg.png</file>
     </qresource>
     <qresource prefix="/language"/>
 </RCC>
